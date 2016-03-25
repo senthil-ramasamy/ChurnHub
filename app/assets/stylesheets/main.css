@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navigation .navbar-nav.navbar-right li a {
-	color: #43484E;
+	color: #FFF;
 	font-family: 'Roboto',sans-serif;
 	font-size: 14px;
 	padding: 0;
@@ -286,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
 #navigation .navbar-inverse .navbar-nav  .active  a:focus, 
 #navigation .navbar-nav.navbar-right li a:hover {
 	color: #fff;
-	background-color: #fc7700;
+	background-color: #4C9ED9;
 }
 
 

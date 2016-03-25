@@ -7,10 +7,10 @@
 
 }
 #footer{
-	background-color: rgba(37, 237, 37, 0.83) !important;
+	background-color: #F7F7F7  !important;
 }
 .navbar{
-	background-color: rgba(255, 165, 0, 0.75) !important;
+	background-color: #000000 !important;
 }
 main{
 	background-color: white !important;
@@ -66,7 +66,7 @@ td{
 }
 
 .head a:hover{
-	color: orange !important;
+	color: blue !important;
 }
 .modal-body{
 	background-color: rgba(0, 0, 0, 0.06);
@@ -82,18 +82,18 @@ td{
 
 .modal-body h2{
 	
-	color: #fc7700;
+	color: #4C9ED9;
 }
 
 .modal-body .btn-primary {
     background-color: rgba(255, 255, 255, 0);
-    border: 1px solid #fc7700;
+    border: 1px solid #4C9ED9;
     color: #686868;
     text-transform: uppercase;
 }
 
 .modal-body .btn-primary:hover {
-	background-color:#fc7700;
+	background-color:#4C9ED9;
 	color:#fff;
 	border-color:#fff;
 	transition: all 0.9s ease 0s;
