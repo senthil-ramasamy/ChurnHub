@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212231555) do
+ActiveRecord::Schema.define(version: 20160325160850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,6 +153,33 @@ ActiveRecord::Schema.define(version: 20151212231555) do
 
   add_index "solns", ["prob_id"], name: "index_solns_on_prob_id", using: :btree
 
+  create_table "testmodels", force: :cascade do |t|
+    t.integer  "modid"
+    t.text     "moddesc"
+    t.string   "modname"
+    t.string   "trainfile"
+    t.string   "testfile"
+    t.text     "addtnl"
+    t.boolean  "modcheck"
+    t.integer  "trainmodel_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "testmodels", ["trainmodel_id"], name: "index_testmodels_on_trainmodel_id", using: :btree
+
+  create_table "trainmodels", force: :cascade do |t|
+    t.integer  "modid"
+    t.text     "moddesc"
+    t.string   "modname"
+    t.string   "trainfile"
+    t.string   "testfile"
+    t.text     "addtnl"
+    t.boolean  "modcheck"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -215,5 +242,6 @@ ActiveRecord::Schema.define(version: 20151212231555) do
   add_index "vprobs", ["prob_id"], name: "index_vprobs_on_prob_id", using: :btree
 
   add_foreign_key "solns", "probs"
+  add_foreign_key "testmodels", "trainmodels"
   add_foreign_key "vprobs", "probs"
 end

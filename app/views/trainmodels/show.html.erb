@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modid:</strong>
+  <%= @trainmodel.modid %>
+</p>
+
+<p>
+  <strong>Moddesc:</strong>
+  <%= @trainmodel.moddesc %>
+</p>
+
+<p>
+  <strong>Modname:</strong>
+  <%= @trainmodel.modname %>
+</p>
+
+<p>
+  <strong>Trainfile:</strong>
+  <%= @trainmodel.trainfile %>
+</p>
+
+<p>
+  <strong>Testfile:</strong>
+  <%= @trainmodel.testfile %>
+</p>
+
+<p>
+  <strong>Addtnl:</strong>
+  <%= @trainmodel.addtnl %>
+</p>
+
+<p>
+  <strong>Modcheck:</strong>
+  <%= @trainmodel.modcheck %>
+</p>
+
+<% @rowarraydisp.each do |row| %>
+  <%= row %>
+<% end %>
+
+<%= link_to 'Edit', edit_trainmodel_path(@trainmodel) %> |
+<%= link_to 'Back', trainmodels_path %>
+
+<input type="button" onclick="window.location = '/publish'">

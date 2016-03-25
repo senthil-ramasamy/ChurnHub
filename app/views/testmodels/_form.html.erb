@@ -1,0 +1,18 @@
+<%= simple_form_for(@testmodel) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :modid %>
+    <%= f.input :moddesc %>
+    <%= f.input :modname %>
+    <%= f.input :trainfile %>
+    <%= f.input :testfile %>
+    <%= f.input :addtnl %>
+    <%= f.input :modcheck %>
+    <%= f.association :trainmodel %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

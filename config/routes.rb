@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :testmodels
+  resources :trainmodels
   resources :complaints
   get 'welcome/index'
   get 'feed' => 'probs#feed'
@@ -36,4 +38,7 @@ Rails.application.routes.draw do
       end
   end
   end
+  get '/publish' => 'trainmodels#trainbutton'
+  get '/testdata' => 'testmodels#testbutton'
+
 end

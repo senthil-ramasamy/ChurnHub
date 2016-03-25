@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Testmodels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modid</th>
+      <th>Moddesc</th>
+      <th>Modname</th>
+      <th>Trainfile</th>
+      <th>Testfile</th>
+      <th>Addtnl</th>
+      <th>Modcheck</th>
+      <th>Trainmodel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @testmodels.each do |testmodel| %>
+      <tr>
+        <td><%= testmodel.modid %></td>
+        <td><%= testmodel.moddesc %></td>
+        <td><%= testmodel.modname %></td>
+        <td><%= testmodel.trainfile %></td>
+        <td><%= testmodel.testfile %></td>
+        <td><%= testmodel.addtnl %></td>
+        <td><%= testmodel.modcheck %></td>
+        <td><%= testmodel.trainmodel %></td>
+        <td><%= link_to 'Show', testmodel %></td>
+        <td><%= link_to 'Edit', edit_testmodel_path(testmodel) %></td>
+        <td><%= link_to 'Destroy', testmodel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testmodel', new_testmodel_path %>

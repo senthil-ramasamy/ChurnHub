@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modid:</strong>
+  <%= @testmodel.modid %>
+</p>
+
+<p>
+  <strong>Moddesc:</strong>
+  <%= @testmodel.moddesc %>
+</p>
+
+<p>
+  <strong>Modname:</strong>
+  <%= @testmodel.modname %>
+</p>
+
+<p>
+  <strong>Trainfile:</strong>
+  <%= @testmodel.trainfile %>
+</p>
+
+<p>
+  <strong>Testfile:</strong>
+  <%= @testmodel.testfile %>
+</p>
+
+<p>
+  <strong>Addtnl:</strong>
+  <%= @testmodel.addtnl %>
+</p>
+
+<p>
+  <strong>Modcheck:</strong>
+  <%= @testmodel.modcheck %>
+</p>
+
+<p>
+  <strong>Trainmodel:</strong>
+  <%= @testmodel.trainmodel %>
+</p>
+
+<%= link_to 'Edit', edit_testmodel_path(@testmodel) %> |
+<%= link_to 'Back', testmodels_path %>
+
+
+
+<input type="button" onclick="window.location = '/testdata'">
