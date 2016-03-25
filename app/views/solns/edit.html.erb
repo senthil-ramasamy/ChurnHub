@@ -1,0 +1,7 @@
+<center><h1>Editing Soln</h1></center>
+
+<%= render 'form' %>
+<center><a href="localhost:4000" class="btn btn-primary btn-md" target="_blank" >Version It</a></center>
+<%= render 'solns/versions', soln: @soln %>
+<%= link_to 'Show', @soln %> |
+<%= link_to 'Back', solns_path %>

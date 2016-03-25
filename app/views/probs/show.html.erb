@@ -1,0 +1,158 @@
+<br>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1425384637715409";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+  <h1><%= @prob.pname %></h1>
+  <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @prob.person %></li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @prob.created_at %></li>
+          <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @prob.rateing %></li>
+          <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions: </strong><%= @prob.solns.count %></li>
+        </ul>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+           </center>
+  <p><p><%= raw(@prob.pstatement) %></p></p>
+  <h4  align="right">Checkout Versions !</h4>
+  
+        
+        <% @prob.vprobs.each do |comment| %>
+          <blockquote class="blockquote-reverse">
+          <p>
+            <strong></strong>
+            <%= raw(comment.pversion.first(100)) %>
+          </p>
+         
+          <footer>
+            <strong>Date:</strong>
+            <%= comment.created_at %>
+             |  <%= link_to 'Show Versions', comment %>
+          </footer>
+         
+        <% end %>
+        <p align="right"><button class="btn btn-primary btn-md pro">Create Version</button><button class="btn btn-primary btn-md pro2">Hide</button></p>
+        <div class="mast">
+        <%= form_for([@prob, @prob.vprobs.build]) do |f| %>
+          <p>
+            <%= f.label :VersionName %><br>
+            <%= f.text_field :pvname %>
+          </p>
+          <p>
+            <%= f.label :Version %><br>
+            <%= f.text_area :pversion, :class => 'ckeditor'  %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+        </div>
+  </div>
+           
+     
+        
+
+        
+ <div class="modal-body">
+      
+
+
+
+
+
+
+        <div class="row">
+          <div class="small-2 large-2 columns">
+        <p>
+          <strong>Tag:#</strong>
+          <%= @prob.tag %>
+        </p>
+
+        <p>
+          <strong>Probstatus:</strong>
+          <%= @prob.probstatus %>
+        </p>
+            <%= imdb_style_rating_for @prob, current_user%>
+          </div>
+          <div class="small-2 large-4 columns">
+            <% if current_user %>
+              Potential: <%= rating_for @prob, "Factor1" %> <br/> Validity : <%= rating_for @prob, "Factor2" %> <br>
+            <% end %>
+          </div>
+        </div>
+
+</div> 
+<br>
+<br>
+<div class="row">
+  <div class ="col-md-9">
+<div class="jumbotron">
+  <h1>Lets find Solution of this ?</h1>
+ <% @prob.solns.each do |comment| %>
+<blockquote>
+  <p><%= raw(comment.solntext) %></p>
+          
+  <footer><%= comment.solndate %> | Rated : <%= comment.solnrating %> | <%= link_to 'View Versions and Edit', edit_soln_path(comment)%></footer>
+</blockquote>
+   <% end %>
+          
+      
+        <button class="btn btn-primary btn-md slo">Create Soln</button><button class="btn btn-primary btn-md slo2">Hide</button>
+        <div class="mast2">
+        <%= form_for([@prob, @prob.solns.build]) do |f| %>
+          <p>
+            <%= f.label :SolnName %><br>
+            <%= f.text_area :solntext, :class => 'ckeditor'  %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+        </div>
+ 
+</div>        
+
+</div>
+<div class="col-md-3">
+  <h3>Existing Solns</h3>
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="http://icons.iconarchive.com/icons/martz90/circle/128/app-draw-icon.png" alt="app icon">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Media App</h4>
+    Lorem Ipsum
+  </div>
+</div>
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="http://icons.iconarchive.com/icons/martz90/circle/128/app-draw-icon.png" alt="app icon">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Object App</h4>
+    Lorem Ipsum
+  </div>
+</div>
+  </div>
+    
+
+    
+  </section>
+  </div>
+</body>
+

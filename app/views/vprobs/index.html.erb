@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vprobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pvname</th>
+      <th>Pversion</th>
+      <th>Pvauthor</th>
+      <th>Pvid</th>
+      <th>Pvdate</th>
+      <th>Pvinteger</th>
+      <th>Prob</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vprobs.each do |vprob| %>
+      <tr>
+        <td><%= vprob.pvname %></td>
+        <td><%= vprob.pversion %></td>
+        <td><%= vprob.pvauthor %></td>
+        <td><%= vprob.pvid %></td>
+        <td><%= vprob.pvdate %></td>
+        <td><%= vprob.pvinteger %></td>
+        <td><%= vprob.prob %></td>
+        <td><%= link_to 'Show', vprob %></td>
+        <td><%= link_to 'Edit', edit_vprob_path(vprob) %></td>
+        <td><%= link_to 'Destroy', vprob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vprob', new_vprob_path %>

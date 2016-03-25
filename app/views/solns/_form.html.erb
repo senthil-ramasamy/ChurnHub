@@ -1,0 +1,20 @@
+<%= simple_form_for(@soln) do |f| %>
+  <%= f.error_notification %>
+<div class="container">
+  <div class="form-inputs">
+
+    <%= f.input :solnname , label: "Name of the Solution", placeholder: "Enter name of solution..."%>
+    <%= f.input :solntext , :class => 'ckeditor', label: "Solution", placeholder: "Enter your solution..." %>
+    <%= f.input :solnauthor, label: "Name of the author", placeholder: "Enter your name..." %>
+    <%= f.input :solndate , label: "Date", placeholder: "dd-mm-yyyy"%>
+    <%= f.association :prob %>
+    
+  </div>
+<center>
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary btn-md" %>
+  </div>
+</center>
+<br/>
+</div>
+<% end %>

@@ -1,0 +1,16 @@
+<%= simple_form_for(@challenge) do |f| %>
+  <%= f.error_notification %>
+<div class="container">
+  <div class="form-inputs">
+    <%= f.text_area :chaltext, :class => 'ckeditor'  %>
+    <%= f.input :chalname %>
+    <%= f.input :chaldate %>
+    <%= f.input :chalprize %>
+    <%= f.input :chalsponsor %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+</div>
+<% end %>

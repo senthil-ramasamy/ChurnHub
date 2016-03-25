@@ -1,0 +1,94 @@
+<br>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+          <h1><%= @soln.solnname %></h1>
+          <ul class="post-meta">
+            <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @soln.solnauthor %></li>
+            <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @soln.solndate %></li>
+            <li><i class="glyphicon glyphicon-star"></i><strong> Ratings:</strong> <%= @soln.solnrating %></li>
+          </ul>
+          <p>
+            <%= raw(@soln.solntext) %>
+          </p>
+
+
+          <p>
+            <strong>Prob: Is Digital Locker Safe</strong>
+          </p>
+
+          <p>
+            <strong>Solnvotes:1</strong>
+            
+          </p>
+          <a href="localhost:4000" class="btn btn-primary btn-md" target="_blank" >Version It</a>
+
+</div>
+</section>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>
+            Discussion
+          </h3>
+          <div class="media">
+             <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
+            <div class="media-body">
+              <h4 class="media-heading">
+                Muthu
+              </h4> I think thats a good idea!
+              <div class="media">
+                 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
+                <div class="media-body">
+                  <h4 class="media-heading">
+                    Senthil
+                  </h4> Voila! We can also have Challenges too :)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>
+            Proposed Soln and Decision
+          </h3>
+          <img src="http://s1.postimg.org/axyi3ndpb/graph.png">
+          <div class="btn-group btn-group-md">
+             
+            <button class="btn btn-success " type="button">
+              <em class="glyphicon glyphicon-align-left"></em> I Agree
+            </button> 
+            <button class="btn btn-danger" type="button">
+              <em class="glyphicon glyphicon-align-center"></em> Disagree
+            </button> 
+            <button class="btn btn-primary" type="button">
+              <em class="glyphicon glyphicon-align-right"></em> Null
+            </button> 
+            <button class="btn btn-warning" type="button">
+              <em class="glyphicon glyphicon-align-justify"></em> Absent :P
+            </button>
+          </div>
+          <h2>
+            Proposed Soln
+          </h2>
+          <p>
+            Prachna, India's iniiative allows the user to file complaint online!
+          </p>
+          <p>
+            <a class="btn" href="#">View details </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

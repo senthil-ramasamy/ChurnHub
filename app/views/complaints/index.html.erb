@@ -1,0 +1,43 @@
+<br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2>Solve it! Win it!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore Challenges</a> <a class="btn btn-primary btn-md" href="/probs" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Explore Problem</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Field</th>
+        
+            <th>Explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @complaints.each do |complaint| %>
+            <tr>
+              <td><h4><h4></td>
+              <td>
+                <h3 class="head">Complaint in <%= link_to complaint.cfield , complaint %></h3>
+
+                <p><%= complaint.ctext.first(150) %></p>
+          
+              <td><h4><%= complaint.cactionseq %></h4></td>
+              <td><%= link_to 'Look at it !', complaint,  class: "btn btn-primary btn-md" %></td>
+              </td>
+            </tr>
+          </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class = "row">
+
+</div>
+<br>
+<center>
+<%= link_to " + File New Complaint", new_complaint_path, class: "btn btn-primary btn-md" %>
+</center>

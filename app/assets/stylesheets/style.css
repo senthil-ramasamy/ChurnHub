@@ -1,0 +1,118 @@
+
+.problems{
+	padding: 85px 0;
+	overflow: hidden;
+	height: 200px;
+	position:relative;
+
+}
+#footer{
+	background-color: rgba(37, 237, 37, 0.83) !important;
+}
+.navbar{
+	background-color: rgba(255, 165, 0, 0.75) !important;
+}
+main{
+	background-color: white !important;
+}
+
+
+.gr{
+	color: #43484E;
+}
+
+.star img{
+	display: inline;
+}
+.prob:hover{
+	background-color: #F7F7F7;
+	padding: 15px;
+	margin: 5px;
+}
+.form-inputs{
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.prob{
+	background-color: white;
+	border-top: 2px rgba(128, 128, 128, 0.37) solid;
+	border-bottom: 2px rgba(128, 128, 128, 0.37) solid;
+	padding: 15px;
+	margin: 5px;
+}
+
+li{
+	text-align: left;
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
+}
+
+td li{
+	text-align: left;
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
+}
+td p{
+	color: #43484E;
+}
+
+td{
+	vertical-align: middle !important;
+}
+.head a{
+	color: black !important;
+}
+
+.head a:hover{
+	color: orange !important;
+}
+.modal-body{
+	background-color: rgba(0, 0, 0, 0.06);
+	margin-top: 25px;
+}
+
+.modal-body li{
+	text-align: left;
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
+}
+
+.modal-body h2{
+	
+	color: #fc7700;
+}
+
+.modal-body .btn-primary {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #fc7700;
+    color: #686868;
+    text-transform: uppercase;
+}
+
+.modal-body .btn-primary:hover {
+	background-color:#fc7700;
+	color:#fff;
+	border-color:#fff;
+	transition: all 0.9s ease 0s;
+	-moz-transition: all 0.9s ease 0s;
+	-webkit-transition: all 0.9s ease 0s;
+	-o-transition: all 0.9s ease 0s;
+}
+
+.modal-body img{
+	margin-top: 40px;
+
+}
+.pq{
+	margin-top: 20px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+
+.qw{
+	margin-top: 100px;
+}

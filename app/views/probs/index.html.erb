@@ -1,0 +1,47 @@
+<br><br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2>Problems Exploration!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Problem</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Votes</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @probs.each do |prob| %>
+            <tr>
+              <td><h4><%= prob.pid %><h4></td>
+              <td>
+                <h3 class="head"><%= link_to prob.pname , prob  %></h3>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= prob.person %></li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= prob.pdate %></li>
+                  <li><i class="glyphicon glyphicon-star"></i><strong> Ratings: <%= prob.rateing %></strong></li>
+                  <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions:</strong></li>
+                </ul>
+                <p><%= raw(prob.pstatement) %></p>
+                
+              </td>
+              <td><h4><%= prob.probstatus %><h4></td>
+              <td><h4><%= prob.votes %>3</h4></td>
+              <td ><%= link_to '#' + prob.tag, prob , class: "btn btn-primary btn-sm" %></td>
+            </tr>
+          </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class = "row">
+
+</div>
+<br>
+<center>
+<%= link_to '+ Add Problem', new_prob_path, class: "btn btn-primary btn-md" %></center>

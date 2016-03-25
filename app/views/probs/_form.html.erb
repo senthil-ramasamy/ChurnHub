@@ -1,0 +1,16 @@
+<%= simple_form_for(@prob) do |f| %>
+  <%= f.error_notification %>
+  <div class="container">
+    <div class="form-inputs">
+      <%= f.input :pname, label: "Project Title" , placeholder: "Enter appropriate title..." %><br/>
+      <%= f.text_area :pstatement, label: "Project Statements", :class => 'ckeditor', placeholder: "Enter information about the problem..." %>
+      <%= f.input :person, label: "Name of the person", placeholder: "Enter your name..." %>
+      <%= f.input :probstatus, label: "Status ", placeholder: "to be voted" %>
+      <%= f.input :tag, label: "Tags", placeholder: "Enter appropriate tags..." %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-primary btn-md" %> 
+      <%= link_to 'Back', probs_path, class: "btn btn-primary btn-md" %>
+    </div>
+  </div>
+<% end %>

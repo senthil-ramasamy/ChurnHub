@@ -1,0 +1,15 @@
+<%= simple_form_for(@complaint) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :ctext , label: "Complaint Title" , placeholder: "Enter appropriate title..."%>
+    <%= f.text_area :cfield, :class => 'ckeditor' %>
+    <%= f.input :cactionseq , label: "Action Sequence No."%>
+    <%= f.input :ifprivate %>
+    <%= f.input :cpersonal %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

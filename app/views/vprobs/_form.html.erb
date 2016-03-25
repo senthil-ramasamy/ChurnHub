@@ -1,0 +1,18 @@
+<%= simple_form_for(@vprob) do |f| %>
+  <%= f.error_notification %>
+<div class="container">
+  <div class="form-inputs">
+    
+    <%= f.input :pversion, label: "Version", placeholder: "Enter Version..." %>
+    <%= f.input :pvauthor, label: "Name of the author", placeholder: "Enter your name..." %>
+    
+    <%= f.input :pvdate, label: "Enter date", placeholder: "dd-mm-yyyy" %>
+    
+    <%= f.association :prob %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+</div>
+<% end %>

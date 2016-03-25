@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @complaint.cid %>
+</p>
+
+<p>
+  <strong>Ctext:</strong>
+  <%= @complaint.ctext %>
+</p>
+
+<p>
+  <strong>Cfield:</strong>
+  <%= @complaint.cfield %>
+</p>
+
+<p>
+  <strong>Cactionseq:</strong>
+  <%= @complaint.cactionseq %>
+</p>
+
+<p>
+  <strong>Ifprivate:</strong>
+  <%= @complaint.ifprivate %>
+</p>
+
+<p>
+  <strong>Cpersonal:</strong>
+  <%= @complaint.cpersonal %>
+</p>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>

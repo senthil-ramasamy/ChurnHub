@@ -1,0 +1,39 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+  <h1><%= @challenge.chalname %></h1>
+  <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= @challenge.chalname %></li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @challenge.chaldate %></li>
+          
+          
+        </ul>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+           </center>
+  <p><p><%= raw(@challenge.chaltext) %></p></p>
+
+
+
+
+<p>
+  <strong>Chalprize:</strong>
+  <%= @challenge.chalprize %>
+</p>
+
+<p>
+  <strong>Chalsponsor:</strong>
+  <%= @challenge.chalsponsor %>
+</p>
+
+<%= commontator_thread(@challenge) %>
+
+
+<%= link_to 'Edit', edit_challenge_path(@challenge) %> |
+<%= link_to 'Back', challenges_path %>
+</div>
+</section>
+</html>

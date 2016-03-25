@@ -1,0 +1,50 @@
+        <td></td>
+
+<br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2>Solve it! Win it!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore Challenges</a> <a class="btn btn-primary btn-md" href="/probs" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Explore Problem</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Prize</th>
+            <th>Sponsor</th>
+            <th>Explore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @challenges.each do |challenge| %>
+            <tr>
+              <td><h4><h4></td>
+              <td>
+                <h3 class="head"><%= link_to challenge.chalname , challenge  %></h3>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> NitHackathon</li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong><%= challenge.chaldate %></li>
+                  <li><i class="glyphicon glyphicon-star"></i><strong> Prize : Rs.<%= challenge.chalprize %></strong></li>
+                  <li><i class="glyphicon glyphicon-comment"></i><strong> Desc:</strong></li>
+                </ul>
+                <p><%= raw(challenge.chaltext.first(150)) %></p>
+                
+              <td><h4><%= challenge.chalprize %><h4></td>
+              <td><h4><%= challenge.chalsponsor %></h4></td>
+              <td><%= link_to 'Explore !', challenge,  class: "btn btn-primary btn-md" %></td>
+              </td>
+            </tr>
+          </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class = "row">
+
+</div>
+<br>
+<center>
+<%= link_to '+ Create Challenge', new_challenge_path, class: "btn btn-primary btn-md" %></center>

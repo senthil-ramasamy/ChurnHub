@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cid: 1
+  ctext: MyText
+  cfield: MyString
+  cactionseq: 1
+  ifprivate: false
+  cpersonal: MyText
+
+two:
+  cid: 1
+  ctext: MyText
+  cfield: MyString
+  cactionseq: 1
+  ifprivate: false
+  cpersonal: MyText

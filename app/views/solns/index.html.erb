@@ -1,0 +1,50 @@
+<br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2>Lets find Solutions!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore Solutions</a> <a class="btn btn-primary btn-md" href="/probs" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Explore Problem</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Votes</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @solns.each do |soln| %>
+            <tr>
+              <td><h4><%= soln.solnid %><h4></td>
+              <td>
+                <h3 class="head"><%= link_to soln.solnname , soln  %></h3>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> <%= soln.solnauthor %></li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= soln.solndate %></li>
+                  <li><i class="glyphicon glyphicon-star"></i><strong> Ratings: <%= soln.solnrating %></strong></li>
+                  <li><i class="glyphicon glyphicon-comment"></i><strong> Solutions:</strong></li>
+                </ul>
+                <p><%= raw(soln.solntext.first(150))%></p>
+                <td><%= link_to 'Explore !', soln, class: "btn btn-primary btn-md" %></td>
+              </td>
+              <td><h4><%= soln.solnrating %><h4></td>
+              <td>
+                <%= link_to "upvote", like_soln_path(soln), method: :put %><br>
+                <%= soln.get_upvotes.size - soln.get_downvotes.size %><br>
+                <%= link_to "downvote", dislike_soln_path(soln), method: :put %>
+              </td>
+          
+          </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class = "row">
+
+</div>
+<br>
+<center>
+<%= link_to '+ Participate', new_soln_path, class: "btn btn-primary btn-md" %></center>
