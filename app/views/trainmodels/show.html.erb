@@ -1,45 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+  <h1><%= @trainmodel.modname %></h1>
+  <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Senthil</li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @trainmodel.created_at %></li>
+        </ul>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+           
+  <p><%= @trainmodel.moddesc %></p>
+</center>
+  <br><center>
+<p><strong> File Path :</strong> <%= @trainmodel.trainfile %> </p><input type="button" value = "+ Train the model!" onclick="window.location = '/publish'" class ="btn btn-primary btn-md"><br>
+<%= link_to 'Edit', edit_trainmodel_path(@trainmodel),  class: "btn btn-primary btn-md" %>
+<%= link_to 'Back', trainmodels_path ,  class: "btn btn-primary btn-md"%>
 
-<p>
-  <strong>Modid:</strong>
-  <%= @trainmodel.modid %>
-</p>
+</center>
+  
+</div>
+           
+     
 
-<p>
-  <strong>Moddesc:</strong>
-  <%= @trainmodel.moddesc %>
-</p>
+<strong><h2>Features List : </h2></strong>
+<%= @rowarraydisp.first() %>
+<br><nr>
 
-<p>
-  <strong>Modname:</strong>
-  <%= @trainmodel.modname %>
-</p>
-
-<p>
-  <strong>Trainfile:</strong>
-  <%= @trainmodel.trainfile %>
-</p>
-
-<p>
-  <strong>Testfile:</strong>
-  <%= @trainmodel.testfile %>
-</p>
-
-<p>
-  <strong>Addtnl:</strong>
-  <%= @trainmodel.addtnl %>
-</p>
-
-<p>
-  <strong>Modcheck:</strong>
-  <%= @trainmodel.modcheck %>
-</p>
-
-<% @rowarraydisp.each do |row| %>
-  <%= row %>
+<strong><h2>Example CSV Data : </h2></strong>
+<% @rowarraydisp.drop(1).each do |row| %>
+  <%= row %><br>
 <% end %>
-
-<%= link_to 'Edit', edit_trainmodel_path(@trainmodel) %> |
-<%= link_to 'Back', trainmodels_path %>
-
-<input type="button" onclick="window.location = '/publish'">

@@ -1,0 +1,311 @@
+  Churn  gender  SeniorCitizen Partner Dependents  tenure PhoneService  \
+0    No  Female              0     Yes         No       1           No   
+1    No    Male              0      No         No      34          Yes   
+2   Yes    Male              0      No         No       2          Yes   
+3    No    Male              0      No         No      45           No   
+4   Yes  Female              0      No         No       2          Yes   
+
+      MultipleLines InternetService OnlineSecurity     ...      \
+0  No phone service             DSL             No     ...       
+1                No             DSL            Yes     ...       
+2                No             DSL            Yes     ...       
+3  No phone service             DSL            Yes     ...       
+4                No     Fiber optic             No     ...       
+
+  DeviceProtection TechSupport StreamingTV StreamingMovies        Contract  \
+0               No          No          No              No  Month-to-month   
+1              Yes          No          No              No        One year   
+2               No          No          No              No  Month-to-month   
+3              Yes         Yes          No              No        One year   
+4               No          No          No              No  Month-to-month   
+
+  PaperlessBilling              PaymentMethod MonthlyCharges  TotalCharges  \
+0              Yes           Electronic check          29.85         29.85   
+1               No               Mailed check          56.95       1889.50   
+2              Yes               Mailed check          53.85        108.15   
+3               No  Bank transfer (automatic)          42.30       1840.75   
+4              Yes           Electronic check          70.70        151.65   
+
+   customerID  
+0           1  
+1           2  
+2           3  
+3           4  
+4           5  
+
+[5 rows x 21 columns]
+[   18.8     18.85    19.   ...,  8496.7   8529.5   8564.75]
+Churn                object
+gender               object
+SeniorCitizen         int64
+Partner              object
+Dependents           object
+tenure                int64
+PhoneService         object
+MultipleLines        object
+InternetService      object
+OnlineSecurity       object
+OnlineBackup         object
+DeviceProtection     object
+TechSupport          object
+StreamingTV          object
+StreamingMovies      object
+Contract             object
+PaperlessBilling     object
+PaymentMethod        object
+MonthlyCharges      float64
+TotalCharges        float64
+customerID            int64
+dtype: object
+   Churn  gender  SeniorCitizen  Partner  Dependents  tenure  PhoneService  \
+0      0       0              0        1           0       1             0   
+1      0       1              0        0           0      34             1   
+2      1       1              0        0           0       2             1   
+3      0       1              0        0           0      45             0   
+4      1       0              0        0           0       2             1   
+
+   MultipleLines  InternetService  OnlineSecurity     ...      \
+0              0                1               0     ...       
+1              0                1               1     ...       
+2              0                1               1     ...       
+3              0                1               1     ...       
+4              0                2               0     ...       
+
+   DeviceProtection  TechSupport  StreamingTV  StreamingMovies  Contract  \
+0                 0            0            0                0         1   
+1                 1            0            0                0         2   
+2                 0            0            0                0         1   
+3                 1            1            0                0         2   
+4                 0            0            0                0         1   
+
+   PaperlessBilling  PaymentMethod  MonthlyCharges  TotalCharges  customerID  
+0                 1              3           29.85         29.85           1  
+1                 0              4           56.95       1889.50           2  
+2                 1              4           53.85        108.15           3  
+3                 0              1           42.30       1840.75           4  
+4                 1              3           70.70        151.65           5  
+
+[5 rows x 21 columns]
+Churn                 int64
+gender                int64
+SeniorCitizen         int64
+Partner               int64
+Dependents            int64
+tenure                int64
+PhoneService          int64
+MultipleLines         int64
+InternetService       int64
+OnlineSecurity        int64
+OnlineBackup          int64
+DeviceProtection      int64
+TechSupport           int64
+StreamingTV           int64
+StreamingMovies       int64
+Contract              int64
+PaperlessBilling      int64
+PaymentMethod         int64
+MonthlyCharges      float64
+TotalCharges        float64
+customerID            int64
+dtype: object
+False
+Feature space holds 3000 observations and 21 features
+Unique target labels: [0 1]
+Support vector machines:
+1.000
+Random forest:
+0.999
+K-nearest-neighbors:
+0.983
+[('Support Vector Machines', array([[2220,    0],
+       [   0,  780]])), ('Random Forest', array([[2220,    0],
+       [   2,  778]])), ('K-Nearest-Neighbors', array([[2210,   10],
+       [  43,  737]]))]
+[[2220    0]
+ [   0  780]]
+   pred_prob  count  true_prob
+0        0.0   1920        0.0
+1        1.0    481        1.0
+2        0.1    250        0.0
+3        0.9    219        1.0
+4        0.8     59        1.0
+5        0.2     37        0.0
+6        0.7     19        1.0
+7        0.3     11        0.0
+8        0.4      2        0.0
+9        0.6      2        1.0
+<ggplot: (-889491476)>
+     Churn  gender  SeniorCitizen Partner Dependents  tenure PhoneService  \
+2410    No  Female              0     Yes         No      43          Yes   
+1346   Yes  Female              0     Yes        Yes      14          Yes   
+2831   Yes  Female              1     Yes         No      12          Yes   
+1027    No  Female              0      No         No      47          Yes   
+2382    No  Female              0      No         No      29           No   
+
+         MultipleLines InternetService OnlineSecurity     ...      \
+2410               Yes     Fiber optic             No     ...       
+1346               Yes     Fiber optic             No     ...       
+2831               Yes     Fiber optic             No     ...       
+1027               Yes     Fiber optic            Yes     ...       
+2382  No phone service             DSL            Yes     ...       
+
+     DeviceProtection TechSupport StreamingTV StreamingMovies        Contract  \
+2410               No          No          No              No  Month-to-month   
+1346              Yes          No          No             Yes  Month-to-month   
+2831              Yes          No         Yes              No  Month-to-month   
+1027              Yes          No         Yes              No        One year   
+2382               No         Yes          No              No        One year   
+
+     PaperlessBilling            PaymentMethod MonthlyCharges  TotalCharges  \
+2410               No         Electronic check          80.45       3398.90   
+1346              Yes         Electronic check          87.25       1258.60   
+2831              Yes         Electronic check          98.10       1060.20   
+1027               No  Credit card (automatic)          94.90       4615.25   
+2382               No  Credit card (automatic)          39.50       1082.75   
+
+      customerID  
+2410        2411  
+1346        1347  
+2831        2832  
+1027        1028  
+2382        2383  
+
+[5 rows x 21 columns]
+      Churn  gender  SeniorCitizen  Partner  Dependents  tenure  PhoneService  \
+2410      0       0              0        1           0      43             1   
+1346      1       0              0        1           1      14             1   
+2831      1       0              1        1           0      12             1   
+1027      0       0              0        0           0      47             1   
+2382      0       0              0        0           0      29             0   
+
+      MultipleLines  InternetService  OnlineSecurity     ...      \
+2410              1                2               0     ...       
+1346              1                2               0     ...       
+2831              1                2               0     ...       
+1027              1                2               1     ...       
+2382              0                1               1     ...       
+
+      DeviceProtection  TechSupport  StreamingTV  StreamingMovies  Contract  \
+2410                 0            0            0                0         1   
+1346                 1            0            0                1         1   
+2831                 1            0            1                0         1   
+1027                 1            0            1                0         2   
+2382                 0            1            0                0         2   
+
+      PaperlessBilling  PaymentMethod  MonthlyCharges  TotalCharges  \
+2410                 0              3           80.45       3398.90   
+1346                 1              3           87.25       1258.60   
+2831                 1              3           98.10       1060.20   
+1027                 0              2           94.90       4615.25   
+2382                 0              2           39.50       1082.75   
+
+      customerID  
+2410        2411  
+1346        1347  
+2831        2832  
+1027        1028  
+2382        2383  
+
+[5 rows x 21 columns]
+Churn                 int64
+gender                int64
+SeniorCitizen         int64
+Partner               int64
+Dependents            int64
+tenure                int64
+PhoneService          int64
+MultipleLines         int64
+InternetService       int64
+OnlineSecurity        int64
+OnlineBackup          int64
+DeviceProtection      int64
+TechSupport           int64
+StreamingTV           int64
+StreamingMovies       int64
+Contract              int64
+PaperlessBilling      int64
+PaymentMethod         int64
+MonthlyCharges      float64
+TotalCharges        float64
+customerID            int64
+dtype: object
+2410    2411
+1346    1347
+2831    2832
+1027    1028
+2382    2383
+637      638
+588      589
+2217    2218
+2377    2378
+2171    2172
+651      652
+812      813
+358      359
+988      989
+1030    1031
+1977    1978
+2427    2428
+1992    1993
+2095    2096
+2707    2708
+1269    1270
+587      588
+1843    1844
+439      440
+2018    2019
+1063    1064
+2861    2862
+2824    2825
+1350    1351
+536      537
+        ... 
+805      806
+790      791
+1013    1014
+2936    2937
+1719    1720
+2822    2823
+34        35
+1594    1595
+1110    1111
+2276    2277
+1835    1836
+873      874
+1464    1465
+2091    2092
+2497    2498
+2844    2845
+1893    1894
+103      104
+2645    2646
+2280    2281
+1040    1041
+1628    1629
+741      742
+2855    2856
+780      781
+241      242
+1372    1373
+2381    2382
+303      304
+98        99
+Name: customerID, dtype: int64
+[[  9.99412299e-01   5.87701056e-04]
+ [  7.88451448e-07   9.99999212e-01]
+ [  2.62130341e-03   9.97378697e-01]
+ ..., 
+ [  9.99547994e-01   4.52006394e-04]
+ [  9.99178601e-01   8.21398753e-04]
+ [  9.99288626e-01   7.11373975e-04]]
+Churn               int64
+customerID          int64
+churn_prob        float64
+customer_worth    float64
+dtype: object
+      Churn  customerID  churn_prob  customer_worth
+2410      0        2411    0.000588         3398.90
+1346      1        1347    0.999999         1258.60
+2831      1        2832    0.997379         1060.20
+1027      0        1028    0.000281         4615.25
+2382      0        2383    0.000455         1082.75

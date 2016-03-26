@@ -7,6 +7,7 @@ class TrainmodelsController < ApplicationController
     @trainmodels = Trainmodel.all
   end
 
+
   # GET /trainmodels/1
   # GET /trainmodels/1.json
   def show
@@ -19,6 +20,9 @@ class TrainmodelsController < ApplicationController
   end
 end
 
+
+
+
   # GET /trainmodels/new
   def new
     @trainmodel = Trainmodel.new
@@ -29,7 +33,7 @@ end
   end
 
 def trainbutton
-  %x(python pycode/churnpred.py > pycode/churnoutput)
+  %x(python churnpred.py > churnoutput)
   puts "python"
   # you should make something like this ! Trainmodel.first.modcheck = True
   respond_to do |format|

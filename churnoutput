@@ -1,0 +1,543 @@
+customerID             int64
+gender                 int64
+SeniorCitizen          int64
+Partner                int64
+Dependents             int64
+tenure                 int64
+PhoneService           int64
+MultipleLines          int64
+OnlineSecurity         int64
+OnlineBackup           int64
+DeviceProtection       int64
+TechSupport            int64
+StreamingTV            int64
+StreamingMovies        int64
+PaperlessBilling       int64
+MonthlyCharges       float64
+PaymentMethod_1      float64
+PaymentMethod_2      float64
+PaymentMethod_3      float64
+PaymentMethod_4      float64
+Contract_1           float64
+Contract_2           float64
+Contract_3           float64
+InternetService_0    float64
+InternetService_1    float64
+InternetService_2    float64
+intercept            float64
+TotalCharges         float64
+dtype: object
+   customerID  gender  SeniorCitizen  Partner  Dependents  tenure  \
+0           1       0              0        1           0       1   
+1           2       1              0        0           0      34   
+2           3       1              0        0           0       2   
+3           4       1              0        0           0      45   
+4           5       0              0        0           0       2   
+5           6       0              0        0           0       8   
+6           7       1              0        0           1      22   
+7           8       0              0        0           0      10   
+8           9       0              0        1           0      28   
+
+   PhoneService  MultipleLines  OnlineSecurity  OnlineBackup      ...       \
+0             0              0               0             1      ...        
+1             1              0               1             0      ...        
+2             1              0               1             1      ...        
+3             0              0               1             0      ...        
+4             1              0               0             0      ...        
+5             1              1               0             0      ...        
+6             1              1               0             1      ...        
+7             0              0               1             0      ...        
+8             1              1               0             0      ...        
+
+   PaymentMethod_3  PaymentMethod_4  Contract_1  Contract_2  Contract_3  \
+0              1.0              0.0         1.0         0.0         0.0   
+1              0.0              1.0         0.0         1.0         0.0   
+2              0.0              1.0         1.0         0.0         0.0   
+3              0.0              0.0         0.0         1.0         0.0   
+4              1.0              0.0         1.0         0.0         0.0   
+5              1.0              0.0         1.0         0.0         0.0   
+6              0.0              0.0         1.0         0.0         0.0   
+7              0.0              1.0         1.0         0.0         0.0   
+8              1.0              0.0         1.0         0.0         0.0   
+
+   InternetService_0  InternetService_1  InternetService_2  intercept  \
+0                0.0                1.0                0.0        1.0   
+1                0.0                1.0                0.0        1.0   
+2                0.0                1.0                0.0        1.0   
+3                0.0                1.0                0.0        1.0   
+4                0.0                0.0                1.0        1.0   
+5                0.0                0.0                1.0        1.0   
+6                0.0                0.0                1.0        1.0   
+7                0.0                1.0                0.0        1.0   
+8                0.0                0.0                1.0        1.0   
+
+   TotalCharges  
+0         29.85  
+1       1889.50  
+2        108.15  
+3       1840.75  
+4        151.65  
+5        820.50  
+6       1949.40  
+7        301.90  
+8       3046.05  
+
+[9 rows x 28 columns]
+customerID             int64
+gender                 int64
+SeniorCitizen          int64
+Partner                int64
+Dependents             int64
+tenure                 int64
+PhoneService           int64
+MultipleLines          int64
+OnlineSecurity         int64
+OnlineBackup           int64
+DeviceProtection       int64
+TechSupport            int64
+StreamingTV            int64
+StreamingMovies        int64
+PaperlessBilling       int64
+PaymentMethod_1      float64
+PaymentMethod_2      float64
+PaymentMethod_3      float64
+PaymentMethod_4      float64
+Contract_1           float64
+Contract_2           float64
+Contract_3           float64
+InternetService_0    float64
+InternetService_1    float64
+InternetService_2    float64
+intercept            float64
+dtype: object
+Index([u'customerID', u'gender', u'SeniorCitizen', u'Partner', u'Dependents',
+       u'tenure', u'PhoneService', u'MultipleLines', u'OnlineSecurity',
+       u'OnlineBackup', u'DeviceProtection', u'TechSupport', u'StreamingTV',
+       u'StreamingMovies', u'PaperlessBilling', u'PaymentMethod_1',
+       u'PaymentMethod_2', u'PaymentMethod_3', u'PaymentMethod_4',
+       u'Contract_1', u'Contract_2', u'Contract_3', u'InternetService_0',
+       u'InternetService_1', u'InternetService_2', u'intercept'],
+      dtype='object')
+customerID             int64
+gender                 int64
+SeniorCitizen          int64
+Partner                int64
+Dependents             int64
+tenure                 int64
+PhoneService           int64
+MultipleLines          int64
+OnlineSecurity         int64
+OnlineBackup           int64
+DeviceProtection       int64
+TechSupport            int64
+StreamingTV            int64
+StreamingMovies        int64
+PaperlessBilling       int64
+PaymentMethod_1      float64
+PaymentMethod_2      float64
+PaymentMethod_3      float64
+PaymentMethod_4      float64
+Contract_1           float64
+Contract_2           float64
+Contract_3           float64
+InternetService_0    float64
+InternetService_1    float64
+InternetService_2    float64
+intercept            float64
+dtype: object
+customerID             int64
+gender                 int64
+SeniorCitizen          int64
+Partner                int64
+Dependents             int64
+tenure                 int64
+PhoneService           int64
+MultipleLines          int64
+OnlineSecurity         int64
+OnlineBackup           int64
+DeviceProtection       int64
+TechSupport            int64
+StreamingTV            int64
+StreamingMovies        int64
+PaperlessBilling       int64
+MonthlyCharges       float64
+TotalCharges         float64
+Churn                  int64
+PaymentMethod_1      float64
+PaymentMethod_2      float64
+PaymentMethod_3      float64
+PaymentMethod_4      float64
+Contract_1           float64
+Contract_2           float64
+Contract_3           float64
+InternetService_0    float64
+InternetService_1    float64
+InternetService_2    float64
+intercept            float64
+dtype: object
+      gender  SeniorCitizen  Partner  Dependents  tenure  PhoneService  \
+0          0              0        1           0       1             0   
+1          1              0        0           0      34             1   
+2          1              0        0           0       2             1   
+3          1              0        0           0      45             0   
+4          0              0        0           0       2             1   
+5          0              0        0           0       8             1   
+6          1              0        0           1      22             1   
+7          0              0        0           0      10             0   
+8          0              0        1           0      28             1   
+9          1              0        0           1      62             1   
+10         1              0        1           1      13             1   
+11         1              0        0           0      16             1   
+12         1              0        1           0      58             1   
+13         1              0        0           0      49             1   
+14         1              0        0           0      25             1   
+15         0              0        1           1      69             1   
+16         0              0        0           0      52             1   
+17         1              0        0           1      71             1   
+18         0              0        1           1      10             1   
+19         0              0        0           0      21             1   
+20         1              1        0           0       1             0   
+21         1              0        1           0      12             1   
+22         1              0        0           0       1             1   
+23         0              0        1           0      58             1   
+24         1              0        1           1      49             1   
+25         0              0        0           0      30             1   
+26         1              0        1           1      47             1   
+27         1              0        1           1       1             0   
+28         1              0        1           0      72             1   
+29         0              0        0           1      17             1   
+...      ...            ...      ...         ...     ...           ...   
+2970       1              1        0           0       5             1   
+2971       0              0        1           1      59             1   
+2972       1              0        1           1      72             0   
+2973       0              0        1           1      62             1   
+2974       1              0        0           0      28             1   
+2975       1              0        0           0       3             1   
+2976       1              0        0           1      19             1   
+2977       1              0        0           0       1             1   
+2978       1              0        0           0      24             1   
+2979       1              1        0           0      57             1   
+2980       0              0        0           0      72             1   
+2981       1              0        0           0      67             1   
+2982       1              0        1           1      52             1   
+2983       1              0        1           1      71             1   
+2984       0              0        1           0      26             1   
+2985       0              0        0           0      35             1   
+2986       0              0        1           1      55             1   
+2987       0              0        1           1      33             1   
+2988       1              0        1           0      72             1   
+2989       1              0        0           1       1             1   
+2990       1              0        0           0      10             0   
+2991       0              1        1           0      37             1   
+2992       1              0        0           0      12             0   
+2993       1              0        1           1       1             1   
+2994       1              0        1           0      62             0   
+2995       0              0        0           0       1             0   
+2996       0              0        0           0      18             1   
+2997       1              1        1           0      69             1   
+2998       1              0        0           0       2             1   
+2999       1              0        1           1      19             1   
+
+      MultipleLines  OnlineSecurity  OnlineBackup  DeviceProtection  \
+0                 0               0             1                 0   
+1                 0               1             0                 1   
+2                 0               1             1                 0   
+3                 0               1             0                 1   
+4                 0               0             0                 0   
+5                 1               0             0                 1   
+6                 1               0             1                 0   
+7                 0               1             0                 0   
+8                 1               0             0                 1   
+9                 0               1             1                 0   
+10                0               1             0                 0   
+11                0               0             0                 0   
+12                1               0             0                 1   
+13                1               0             1                 1   
+14                0               1             0                 1   
+15                1               1             1                 1   
+16                0               0             0                 0   
+17                1               1             0                 1   
+18                0               0             0                 1   
+19                0               0             1                 1   
+20                0               0             0                 1   
+21                0               0             0                 0   
+22                0               0             0                 0   
+23                1               0             1                 0   
+24                0               1             1                 0   
+25                0               1             1                 0   
+26                1               0             1                 0   
+27                0               0             1                 0   
+28                1               1             1                 1   
+29                0               0             0                 0   
+...             ...             ...           ...               ...   
+2970              0               0             0                 0   
+2971              1               1             1                 1   
+2972              0               1             1                 1   
+2973              0               0             1                 1   
+2974              1               1             1                 0   
+2975              0               0             0                 0   
+2976              1               0             0                 0   
+2977              0               0             0                 0   
+2978              0               0             1                 1   
+2979              0               0             0                 1   
+2980              1               0             0                 0   
+2981              0               0             0                 0   
+2982              0               0             0                 0   
+2983              1               1             1                 1   
+2984              1               0             0                 0   
+2985              1               1             1                 1   
+2986              0               0             0                 0   
+2987              0               0             0                 0   
+2988              1               1             1                 1   
+2989              0               0             0                 0   
+2990              0               0             0                 0   
+2991              0               0             0                 1   
+2992              0               0             1                 0   
+2993              0               0             0                 0   
+2994              0               1             1                 0   
+2995              0               0             0                 0   
+2996              1               1             0                 1   
+2997              1               0             1                 0   
+2998              0               0             1                 0   
+2999              0               0             0                 0   
+
+      TechSupport  StreamingTV  StreamingMovies  PaperlessBilling  \
+0               0            0                0                 1   
+1               0            0                0                 0   
+2               0            0                0                 1   
+3               1            0                0                 0   
+4               0            0                0                 1   
+5               0            1                1                 1   
+6               0            1                0                 1   
+7               0            0                0                 0   
+8               1            1                1                 1   
+9               0            0                0                 0   
+10              0            0                0                 1   
+11              0            0                0                 0   
+12              0            1                1                 0   
+13              0            1                1                 1   
+14              1            1                1                 1   
+15              1            1                1                 0   
+16              0            0                0                 0   
+17              0            1                1                 0   
+18              1            0                0                 0   
+19              0            0                1                 1   
+20              0            0                1                 1   
+21              0            0                0                 0   
+22              0            0                0                 0   
+23              1            0                0                 1   
+24              1            0                0                 0   
+25              0            0                0                 1   
+26              0            1                1                 1   
+27              0            0                0                 0   
+28              1            1                1                 1   
+29              0            1                1                 1   
+...           ...          ...              ...               ...   
+2970            0            0                0                 1   
+2971            1            1                1                 0   
+2972            1            1                1                 1   
+2973            0            1                1                 1   
+2974            0            0                1                 1   
+2975            1            0                1                 0   
+2976            0            0                0                 1   
+2977            0            0                0                 1   
+2978            1            0                0                 1   
+2979            1            0                0                 1   
+2980            0            0                0                 0   
+2981            0            0                0                 0   
+2982            0            0                0                 1   
+2983            1            1                1                 0   
+2984            0            0                0                 0   
+2985            1            1                1                 1   
+2986            0            0                0                 1   
+2987            0            0                0                 0   
+2988            0            1                1                 1   
+2989            0            0                0                 1   
+2990            0            0                1                 1   
+2991            1            1                0                 0   
+2992            1            0                0                 0   
+2993            0            0                0                 0   
+2994            1            0                0                 1   
+2995            0            0                0                 0   
+2996            0            0                0                 1   
+2997            0            1                0                 1   
+2998            0            0                0                 1   
+2999            0            0                0                 0   
+
+      MonthlyCharges  intercept  
+0              29.85        1.0  
+1              56.95        1.0  
+2              53.85        1.0  
+3              42.30        1.0  
+4              70.70        1.0  
+5              99.65        1.0  
+6              89.10        1.0  
+7              29.75        1.0  
+8             104.80        1.0  
+9              56.15        1.0  
+10             49.95        1.0  
+11             18.95        1.0  
+12            100.35        1.0  
+13            103.70        1.0  
+14            105.50        1.0  
+15            113.25        1.0  
+16             20.65        1.0  
+17            106.70        1.0  
+18             55.20        1.0  
+19             90.05        1.0  
+20             39.65        1.0  
+21             19.80        1.0  
+22             20.15        1.0  
+23             59.90        1.0  
+24             59.60        1.0  
+25             55.30        1.0  
+26             99.35        1.0  
+27             30.20        1.0  
+28             90.25        1.0  
+29             64.70        1.0  
+...              ...        ...  
+2970           70.25        1.0  
+2971           90.30        1.0  
+2972           65.25        1.0  
+2973          100.15        1.0  
+2974           94.50        1.0  
+2975           60.65        1.0  
+2976           24.10        1.0  
+2977           19.50        1.0  
+2978           85.95        1.0  
+2979           53.50        1.0  
+2980           25.45        1.0  
+2981           20.50        1.0  
+2982           20.85        1.0  
+2983           89.90        1.0  
+2984           26.00        1.0  
+2985          113.20        1.0  
+2986           69.05        1.0  
+2987           20.10        1.0  
+2988          109.65        1.0  
+2989           19.20        1.0  
+2990           33.90        1.0  
+2991           90.00        1.0  
+2992           34.00        1.0  
+2993           20.40        1.0  
+2994           38.60        1.0  
+2995           25.25        1.0  
+2996           60.60        1.0  
+2997           89.95        1.0  
+2998           74.75        1.0  
+2999           20.60        1.0  
+
+[3000 rows x 16 columns]
+Optimization terminated successfully.
+         Current function value: 0.404675
+         Iterations 7
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                  Churn   No. Observations:                 3000
+Model:                          Logit   Df Residuals:                     2984
+Method:                           MLE   Df Model:                           15
+Date:                Sat, 26 Mar 2016   Pseudo R-squ.:                  0.2938
+Time:                        14:56:05   Log-Likelihood:                -1214.0
+converged:                       True   LL-Null:                       -1719.2
+                                        LLR p-value:                8.381e-206
+====================================================================================
+                       coef    std err          z      P>|z|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------------
+gender               0.0249      0.102      0.245      0.806        -0.174     0.224
+SeniorCitizen        0.1008      0.131      0.769      0.442        -0.156     0.358
+Partner              0.1064      0.122      0.873      0.383        -0.133     0.346
+Dependents          -0.3343      0.139     -2.412      0.016        -0.606    -0.063
+tenure              -0.0438      0.003    -13.535      0.000        -0.050    -0.037
+PhoneService        -1.6373      0.214     -7.647      0.000        -2.057    -1.218
+MultipleLines        0.1005      0.126      0.796      0.426        -0.147     0.348
+OnlineSecurity      -0.7089      0.130     -5.455      0.000        -0.964    -0.454
+OnlineBackup        -0.4086      0.122     -3.345      0.001        -0.648    -0.169
+DeviceProtection    -0.4273      0.123     -3.471      0.001        -0.669    -0.186
+TechSupport         -1.1251      0.133     -8.457      0.000        -1.386    -0.864
+StreamingTV         -0.3206      0.133     -2.407      0.016        -0.582    -0.060
+StreamingMovies     -0.0453      0.132     -0.342      0.733        -0.305     0.214
+PaperlessBilling     0.4329      0.115      3.759      0.000         0.207     0.659
+MonthlyCharges       0.0497      0.004     13.395      0.000         0.042     0.057
+intercept           -1.2824      0.208     -6.160      0.000        -1.690    -0.874
+====================================================================================
+                         0         1
+gender           -0.174221  0.224048
+SeniorCitizen    -0.156155  0.357785
+Partner          -0.132617  0.345516
+Dependents       -0.605915 -0.062706
+tenure           -0.050182 -0.037487
+PhoneService     -2.056894 -1.217628
+MultipleLines    -0.146797  0.347713
+OnlineSecurity   -0.963609 -0.454182
+OnlineBackup     -0.648078 -0.169169
+DeviceProtection -0.668587 -0.186014
+TechSupport      -1.385829 -0.864317
+StreamingTV      -0.581665 -0.059550
+StreamingMovies  -0.304909  0.214404
+PaperlessBilling  0.207168  0.658611
+MonthlyCharges    0.042444  0.056993
+intercept        -1.690442 -0.874349
+gender              1.025227
+SeniorCitizen       1.106072
+Partner             1.112322
+Dependents          0.715831
+tenure              0.957112
+PhoneService        0.194512
+MultipleLines       1.105677
+OnlineSecurity      0.492188
+OnlineBackup        0.664564
+DeviceProtection    0.652268
+TechSupport         0.324629
+StreamingTV         0.725708
+StreamingMovies     0.955756
+PaperlessBilling    1.541706
+MonthlyCharges      1.050975
+intercept           0.277372
+dtype: float64
+                      2.5%     97.5%        OR
+gender            0.840112  1.251131  1.025227
+SeniorCitizen     0.855426  1.430158  1.106072
+Partner           0.875800  1.412719  1.112322
+Dependents        0.545575  0.939220  0.715831
+tenure            0.951056  0.963207  0.957112
+PhoneService      0.127850  0.295931  0.194512
+MultipleLines     0.863469  1.415826  1.105677
+OnlineSecurity    0.381513  0.634967  0.492188
+OnlineBackup      0.523050  0.844367  0.664564
+DeviceProtection  0.512432  0.830262  0.652268
+TechSupport       0.250116  0.421339  0.324629
+StreamingTV       0.558967  0.942188  0.725708
+StreamingMovies   0.737190  1.239123  0.955756
+PaperlessBilling  1.230189  1.932107  1.541706
+MonthlyCharges    1.043357  1.058649  1.050975
+intercept         0.184438  0.417133  0.277372
+[ 0  8 16 24 32 40 48 56 64 72]
+[  18.4          29.53888889   40.67777778   51.81666667   62.95555556
+   74.09444444   85.23333333   96.37222222  107.51111111  118.65      ]
+   gender  SeniorCitizen  Partner  Dependents  tenure  PhoneService  \
+0       1              1        1           1       0             1   
+1       1              1        1           1       0             1   
+2       1              1        1           1       0             1   
+3       1              1        1           1       0             1   
+4       1              1        1           1       0             1   
+
+   MultipleLines  OnlineSecurity  OnlineBackup  DeviceProtection  TechSupport  \
+0              1               1             1                 1            1   
+1              1               1             1                 1            1   
+2              1               1             1                 1            1   
+3              1               1             1                 1            1   
+4              1               1             1                 1            1   
+
+   StreamingTV  StreamingMovies  PaperlessBilling  MonthlyCharges  intercept  \
+0            1                1                 1              18          1   
+1            1                1                 1              29          1   
+2            1                1                 1              40          1   
+3            1                1                 1              51          1   
+4            1                1                 1              62          1   
+
+   admit_pred  
+0    0.009668  
+1    0.016588  
+2    0.028320  
+3    0.047946  
+4    0.080051  

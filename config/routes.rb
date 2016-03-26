@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'reports/test'
+
+  get 'reports/train'
+
   resources :testmodels
   resources :trainmodels
   resources :complaints

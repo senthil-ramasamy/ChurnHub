@@ -108,7 +108,7 @@ print "%.3f" % accuracy(y, run_cv(X,y,RF))
 print "K-nearest-neighbors:"
 print "%.3f" % accuracy(y, run_cv(X,y,KNN))
 
-'''
+
 
 #drawing confusion matrix
 
@@ -152,14 +152,14 @@ def draw_confusion_matrices(confusion_matrices, class_names):
 
         #pl.show()
         
-        #pl.savefig("Cmatrix"+str(i)+".png")
+        pl.savefig("Cmatrix"+str(i)+".png")
         i=i+1
 
         
 
 draw_confusion_matrices(confusion_matrices,class_names)
-print confusion_matrices
-print conMatrix
+#print confusion_matrices
+#print conMatrix
 
 
 
@@ -222,9 +222,9 @@ g=ggplot(counts,aes(x='pred_prob',y='true_prob',size='count')) + \
     ggtitle("Random Forest") + \
     xlab("Predicted probability") + ylab("Relative frequency of outcome")
 
-print g
+#print g
 ggsave(g,"rf.png")
-'''
+
 #fitting the model
 
 from sklearn.cross_validation import train_test_split

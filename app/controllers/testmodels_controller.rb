@@ -21,7 +21,7 @@ class TestmodelsController < ApplicationController
   def edit
   end
   def testbutton
-    %x(python pycode/predictive_modelling.py > pycode/pmodeloutput)
+    %x(python predictive_modelling.py > poutput)
     puts "test button fucntion working"
     respond_to do |format|
       format.html { redirect_to trainmodels_path , notice:'the new data successfully predicted !' }

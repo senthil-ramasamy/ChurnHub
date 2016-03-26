@@ -1,41 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Testmodels</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Modid</th>
-      <th>Moddesc</th>
-      <th>Modname</th>
-      <th>Trainfile</th>
-      <th>Testfile</th>
-      <th>Addtnl</th>
-      <th>Modcheck</th>
-      <th>Trainmodel</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @testmodels.each do |testmodel| %>
-      <tr>
-        <td><%= testmodel.modid %></td>
-        <td><%= testmodel.moddesc %></td>
-        <td><%= testmodel.modname %></td>
-        <td><%= testmodel.trainfile %></td>
-        <td><%= testmodel.testfile %></td>
-        <td><%= testmodel.addtnl %></td>
-        <td><%= testmodel.modcheck %></td>
-        <td><%= testmodel.trainmodel %></td>
-        <td><%= link_to 'Show', testmodel %></td>
-        <td><%= link_to 'Edit', edit_testmodel_path(testmodel) %></td>
-        <td><%= link_to 'Destroy', testmodel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<br><br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2> Upload and Explore!</h2></center>
+  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Upload your CSV</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Model Id</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Check</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+           <% @testmodels.each do |testmodel| %>
+            <tr>
+              <td><h4><%= testmodel.modid %><h4></td>
+              <td>
+                <h3 class="head"><%= link_to testmodel.modname , testmodel  %></h3>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Suresh</li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong>12 - 07 - 2016</li>
+                  <li><i class="glyphicon glyphicon-comment"></i><strong> Description Note</strong></li>
+                </ul>
+                <p><%= testmodel.moddesc %></p>
+                
+              </td>
+              <td><h4><% if(testmodel.modcheck==true) %>Executed<% else %>New<% end %><h4></td>
+              <td><h4><%= link_to 'Report View', testmodel, class: "btn btn-primary btn-md" %></h4></td>
+              
+            </tr>
+          </tr>
     <% end %>
   </tbody>
 </table>
+<div class = "row">
 
+</div>
 <br>
-
-<%= link_to 'New Testmodel', new_testmodel_path %>
+<center>
+<%= link_to '+ Upload new test file', new_testmodel_path, class: "btn btn-primary btn-md" %></center>

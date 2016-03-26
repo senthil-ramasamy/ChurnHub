@@ -1,48 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Modid:</strong>
-  <%= @testmodel.modid %>
-</p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+  <h1><%= @testmodel.modname %></h1>
+  <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Senthil</li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @testmodel.created_at %></li>
+        </ul>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+           
+  <p><%= @testmodel.moddesc %></p>
+</center>
+  <br><center>
+<p><strong> File Path :</strong> <%= @testmodel.trainfile %> </p><input type="button" value = "+   Use the model!" onclick="window.location = '/testdata'" class ="btn btn-primary btn-md"><br>
+<%= link_to 'Edit', edit_testmodel_path(@testmodel),  class: "btn btn-primary btn-md" %>
+<%= link_to 'Back', testmodels_path ,  class: "btn btn-primary btn-md"%>
 
-<p>
-  <strong>Moddesc:</strong>
-  <%= @testmodel.moddesc %>
-</p>
+</center>
+  
+</div>
+           
+<!--
 
-<p>
-  <strong>Modname:</strong>
-  <%= @testmodel.modname %>
-</p>
+<strong><h2>Features List : </h2></strong>
+<br><nr>
 
-<p>
-  <strong>Trainfile:</strong>
-  <%= @testmodel.trainfile %>
-</p>
-
-<p>
-  <strong>Testfile:</strong>
-  <%= @testmodel.testfile %>
-</p>
-
-<p>
-  <strong>Addtnl:</strong>
-  <%= @testmodel.addtnl %>
-</p>
-
-<p>
-  <strong>Modcheck:</strong>
-  <%= @testmodel.modcheck %>
-</p>
-
-<p>
-  <strong>Trainmodel:</strong>
-  <%= @testmodel.trainmodel %>
-</p>
-
-<%= link_to 'Edit', edit_testmodel_path(@testmodel) %> |
-<%= link_to 'Back', testmodels_path %>
-
-
-
-<input type="button" onclick="window.location = '/testdata'">
+<strong><h2>Example CSV Data : </h2></strong>
+-->
