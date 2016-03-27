@@ -44,6 +44,8 @@ Rails.application.routes.draw do
   end
   end
   get '/publish/:id' => 'trainmodels#trainbutton'
+  get '/report' => 'trainmodels#report'
+  get '/result' => 'testmodels#result'
   get '/testdata/:id' => 'testmodels#testbutton'
 
 end

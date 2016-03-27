@@ -1,3 +1,7 @@
+heello
+/home/senthiran/hub/problem/public/uploads/trainmodel/trainfile/1/d.csv
+hello
+/home/senthiran/hub/problem/public/uploads/testmodel/testfile/2/dataset2.csv
   Churn  gender  SeniorCitizen Partner Dependents  tenure PhoneService  \
 0    No  Female              0     Yes         No       1           No   
 1    No    Male              0      No         No      34          Yes   
@@ -116,82 +120,46 @@ Support vector machines:
 Random forest:
 1.000
 K-nearest-neighbors:
-0.984
+0.987
     pred_prob  count  true_prob
-0         0.0   1761   0.000000
-1         1.0    401   1.000000
-2         0.1    355   0.000000
-3         0.9    239   1.000000
-4         0.8     90   1.000000
-5         0.2     81   0.000000
-6         0.7     34   1.000000
-7         0.6     14   1.000000
-8         0.3     11   0.000000
-9         0.4      7   0.000000
-10        0.5      7   0.285714
-     Churn  gender  SeniorCitizen Partner Dependents  tenure PhoneService  \
-1600   Yes    Male              1      No         No       1          Yes   
-847     No  Female              0     Yes        Yes      12           No   
-1157    No  Female              1     Yes         No      62          Yes   
-1580    No  Female              1     Yes         No      21          Yes   
-405     No    Male              0      No         No      72          Yes   
-
-         MultipleLines InternetService       OnlineSecurity     ...      \
-1600               Yes     Fiber optic                   No     ...       
-847   No phone service             DSL                  Yes     ...       
-1157               Yes     Fiber optic                   No     ...       
-1580               Yes             DSL                   No     ...       
-405                 No              No  No internet service     ...       
-
-         DeviceProtection          TechSupport          StreamingTV  \
-1600                  Yes                   No                  Yes   
-847                    No                  Yes                   No   
-1157                  Yes                   No                  Yes   
-1580                  Yes                   No                   No   
-405   No internet service  No internet service  No internet service   
-
-          StreamingMovies        Contract PaperlessBilling  \
-1600                   No  Month-to-month              Yes   
-847                    No        One year               No   
-1157                   No        One year              Yes   
-1580                  Yes        One year               No   
-405   No internet service        Two year              Yes   
-
-                  PaymentMethod MonthlyCharges  TotalCharges  customerID  
-1600           Electronic check          88.80         88.80        1601  
-847     Credit card (automatic)          33.15        444.75         848  
-1157    Credit card (automatic)          97.95       5936.55        1158  
-1580  Bank transfer (automatic)          71.70       1497.05        1581  
-405     Credit card (automatic)          19.80       1468.75         406  
-
-[5 rows x 21 columns]
+0         0.0   1826        0.0
+1         1.0    404        1.0
+2         0.1    313        0.0
+3         0.9    258        1.0
+4         0.8    100        1.0
+5         0.2     63        0.0
+6         0.3     16        0.0
+7         0.7     12        1.0
+8         0.6      5        1.0
+9         0.4      2        0.0
+10        0.5      1        1.0
    Unnamed: 0  Churn  gender  SeniorCitizen  Partner  Dependents  tenure  \
-0         613      0       0              1        0           0      44   
-1        2184      1       0              1        0           0       2   
-2         324      0       1              0        0           0      69   
-3        1546      0       0              0        0           0      60   
-4        2544      0       0              0        1           0      12   
+0        4000      0       0              1        0           0      39   
+1        4001      0       1              0        1           1      45   
+2        4002      0       1              0        1           1      72   
+3        4003      0       0              0        0           0      38   
+4        4004      0       1              0        1           0      72   
 
    PhoneService  MultipleLines  InternetService     ...      DeviceProtection  \
 0             1              1                2     ...                     1   
 1             1              1                2     ...                     1   
-2             0              0                1     ...                     0   
+2             1              1                1     ...                     1   
 3             1              0                0     ...                     0   
 4             1              1                1     ...                     1   
 
    TechSupport  StreamingTV  StreamingMovies  Contract  PaperlessBilling  \
-0            0            1                1         2                 1   
-1            0            0                1         1                 1   
-2            1            1                1         3                 1   
+0            0            1                1         1                 1   
+1            1            1                1         3                 1   
+2            1            1                0         3                 1   
 3            0            0                0         3                 0   
-4            0            1                1         2                 0   
+4            1            0                0         3                 1   
 
    PaymentMethod  MonthlyCharges  TotalCharges  customerID  
-0              2          109.80       4860.35         614  
-1              3           88.55        179.25        2185  
-2              1           60.05       4176.70         325  
-3              1           19.85       1128.10        1547  
-4              3           78.85        876.75        2545  
+0              3           99.75       4036.00        4001  
+1              1          109.75       4900.65        4002  
+2              1           80.85       5727.45        4003  
+3              4           20.30        743.05        4004  
+4              1           67.80       4804.65        4005  
 
 [5 rows x 22 columns]
 Unnamed: 0            int64
@@ -217,75 +185,75 @@ MonthlyCharges      float64
 TotalCharges        float64
 customerID            int64
 dtype: object
-0       614
-1      2185
-2       325
-3      1547
-4      2545
-5      1481
-6      2761
-7      1684
-8      2524
-9       150
-10     2127
-11     2305
-12     1814
-13     2928
-14       45
-15     1215
-16     1646
-17     1847
-18     2432
-19     2845
-20      104
-21     1264
-22      415
-23     1420
-24      735
-25      483
-26     2667
-27      738
-28     2878
-29      904
+0      4001
+1      4002
+2      4003
+3      4004
+4      4005
+5      4006
+6      4007
+7      4008
+8      4009
+9      4010
+10     4011
+11     4012
+12     4013
+13     4014
+14     4015
+15     4016
+16     4017
+17     4018
+18     4019
+19     4020
+20     4021
+21     4022
+22     4023
+23     4024
+24     4025
+25     4026
+26     4027
+27     4028
+28     4029
+29     4030
        ... 
-720    1874
-721       5
-722    1697
-723     439
-724    1996
-725    2908
-726    1491
-727     342
-728      53
-729    2335
-730    1352
-731    1667
-732    2743
-733    1979
-734     550
-735    1276
-736     453
-737    2522
-738     484
-739    2716
-740     970
-741     208
-742     706
-743    1728
-744    2952
-745    1483
-746    1182
-747    2344
-748     948
-749    2902
+970    4971
+971    4972
+972    4973
+973    4974
+974    4975
+975    4976
+976    4977
+977    4978
+978    4979
+979    4980
+980    4981
+981    4982
+982    4983
+983    4984
+984    4985
+985    4986
+986    4987
+987    4988
+988    4989
+989    4990
+990    4991
+991    4992
+992    4993
+993    4994
+994    4995
+995    4996
+996    4997
+997    4998
+998    4999
+999    5000
 Name: customerID, dtype: int64
-[[  9.99449641e-01   5.50359298e-04]
- [  6.52313474e-06   9.99993477e-01]
- [  9.99120136e-01   8.79864041e-04]
+[[ 0.99820042  0.00179958]
+ [ 0.99757025  0.00242975]
+ [ 0.99777188  0.00222812]
  ..., 
- [  9.99651395e-01   3.48605275e-04]
- [  9.99119126e-01   8.80873542e-04]
- [  9.99119616e-01   8.80383607e-04]]
+ [ 0.05446394  0.94553606]
+ [ 0.99283931  0.00716069]
+ [ 0.99365261  0.00634739]]
 Unnamed: 0          int64
 TotalCharges      float64
 customerID          int64
@@ -293,8 +261,8 @@ churn_prob        float64
 customer_worth    float64
 dtype: object
    Unnamed: 0  TotalCharges  customerID  churn_prob  customer_worth
-0         613       4860.35         614    0.000550         4860.35
-1        2184        179.25        2185    0.999993          179.25
-2         324       4176.70         325    0.000880         4176.70
-3        1546       1128.10        1547    0.000646         1128.10
-4        2544        876.75        2545    0.000631          876.75
+0        4000       4036.00        4001    0.001800         4036.00
+1        4001       4900.65        4002    0.002430         4900.65
+2        4002       5727.45        4003    0.002228         5727.45
+3        4003        743.05        4004    0.002073          743.05
+4        4004       4804.65        4005    0.002303         4804.65

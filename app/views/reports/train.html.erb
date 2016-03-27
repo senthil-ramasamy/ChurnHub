@@ -4,13 +4,13 @@
 
 <table border="0" cellspacing="5" cellpadding="5" class = "table">
   <tr>
-  <% @csv_table.headers.drop(2).each do |header| %>
+  <% @csv_table.headers.drop(1).each do |header| %>
     <th><%= header %></th>
   <% end %> 
   </tr>
   <% @csv_table.each do |row| %>
     <tr>
-    <% row.drop(2).each do |element| %>
+    <% row.drop(1).each do |element| %>
       <td><%= element[1] %></td>
     <% end %>
     </tr>

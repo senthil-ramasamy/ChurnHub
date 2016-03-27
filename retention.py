@@ -6,7 +6,7 @@ import csv
 
 
 
-df=pd.read_csv("FinalResult.csv")
+df=pd.read_csv("FinalResult2.csv")
 
 print df.head()
 

@@ -6,7 +6,10 @@ import csv
 import os
 import sys
 #reading the csv file
-
+print "heello"
+print sys.argv[1]
+print "hello"
+print sys.argv[2]
 df=pd.read_csv(sys.argv[1])
 
 #checking input data
@@ -238,7 +241,7 @@ clf.fit(X[train_index],y[train_index])
 test_churn_df = df.ix[test_index]
 test_churn_df.to_csv("test_churn.csv")
 
-print test_churn_df.head()
+#print test_churn_df.head()
 
 
 #applying for the test data
@@ -284,6 +287,8 @@ r["customer_worth"]=churnspace["TotalCharges"]
 print r.dtypes
 
 print r.head()
+
+r=r.drop(r.columns[0:2],axis=1)
 
 r.to_csv("FinalResult.csv")
 

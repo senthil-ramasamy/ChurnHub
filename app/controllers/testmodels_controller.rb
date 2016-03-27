@@ -11,6 +11,9 @@ class TestmodelsController < ApplicationController
   # GET /testmodels/1.json
   def show
   end
+  
+  def result
+  end
 
   # GET /testmodels/new
   def new

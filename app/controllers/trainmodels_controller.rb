@@ -20,6 +20,9 @@ class TrainmodelsController < ApplicationController
   end
 end
 
+  def report
+    @csv_table = CSV.open("FinalResult.csv", :headers => true).read
+  end
   # GET /trainmodels/new
   def new
     @trainmodel = Trainmodel.new
@@ -33,6 +36,7 @@ def trainbutton
   Trainmodel.find(params[:id]).modcheck = true
   mycsv = Trainmodel.find(params[:id]).trainfile
   %x(python churntrain.py #{mycsv.path} > churnoutput)
+  %x(cp churnoutput public/churnoutput.txt)
   puts "python"
   # you should make something like this ! Trainmodel.first.modcheck = True
   respond_to do |format|

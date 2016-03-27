@@ -110,6 +110,11 @@ result=logit.fit()
 
 print result.summary()
 
+#result.to_csv("logit.csv")
+
+xi = result.conf_int()
+xi.to_csv("logit.csv")
+
 print result.conf_int()
 
 print np.exp(result.params)
@@ -165,7 +170,9 @@ combos.columns=['gender','SeniorCitizen','Partner','Dependents','tenure','PhoneS
 
 combos['admit_pred']=result.predict(combos[tcols])
 
+print "combos head "
 print combos.head()
+
 
 def isolate_and_plot(variable):
     # isolate gre and class rank
