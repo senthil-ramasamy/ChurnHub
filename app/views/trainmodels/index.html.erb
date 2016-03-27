@@ -1,20 +1,20 @@
-
+  
 
 <br><br><p id="notice"><%= notice %></p>
 <div class="container">
   
 <div class="jumbotron">
-  <center><h2> Models Exploration!</h2></center>
-  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New Model</a></p></center>
+  <center><h2> Models in ChurnHub !</h2></center>
+  <p>Traditional analytics tools tell you what your customers did in the past, but not what they will do in the future. Get spot-on predictions about your customers' next ideas.</p>
+  <center><p><a class="btn btn-primary btn-md" href="/trainmodels" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="/trainmodels/new" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New Model</a></p></center>
 </div>
     <table class="table">
         <thead>
           <tr>
             <th>Model Id</th>
-            <th>Title</th>
+            <th>Title and Details</th>
             <th>Status</th>
-            <th>Check</th>
+            <th>Check it out!</th>
             <th></th>
           </tr>
         </thead>
@@ -33,7 +33,7 @@
                 
               </td>
               <td><h4><% if(trainmodel.modcheck==true) %>Trained<% else %>Non-Trained<% end %><h4></td>
-              <td><h4><%= link_to 'Report View', trainmodel, class: "btn btn-primary btn-md" %></h4></td>
+              <td><h4><%= link_to 'View !', trainmodel, class: "btn btn-primary btn-md" %></h4></td>
               
             </tr>
           </tr>

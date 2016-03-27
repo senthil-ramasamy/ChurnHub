@@ -1,19 +1,19 @@
-<center><br><h1 class = "bg-success"><br>Successfully Trained !<br><img src="http://www.flowmotioncafe.com/wp/wp-content/uploads/green_tick-300x300.png"></h1>
-<p >Find some of the churned results below ... ! </p>
+<center><br><h1 class = "bg-success"><br>Successfully Trained !<br><img src="http://www.flowmotioncafe.com/wp/wp-content/uploads/green_tick-300x300.png"><br><%= link_to "Download Output Log", '/churnoutput.txt', class: "btn btn-danger btn-lg" %><br><br></h1>
+<p >Find some of the logit regression results below ... ! </p>
 
 <%= @rowarraydisp %>
 
-<%= link_to "download", '/FinalResult.csv', class: "btn btn-primary" %>
+
 
 <table border="0" cellspacing="5" cellpadding="5" class = "table">
   <tr>
-  <% @csv_table.headers.drop(1).each do |header| %>
+  <% @csv_table.headers.each do |header| %>
     <th><%= header %></th>
   <% end %> 
   </tr>
-  <% @csv_table.first(5).each do |row| %>
+  <% @csv_table.each do |row| %>
     <tr>
-    <% row.drop(1).each do |element| %>
+    <% row.each do |element| %>
       <td><%= element[1] %></td>
     <% end %>
     </tr>
