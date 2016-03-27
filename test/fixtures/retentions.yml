@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  retid: 1
+  trainmodel_id: 
+  offer1: MyString
+  offer2: MyString
+  offer3: MyString
+  range: MyText
+  modcheck: false
+
+two:
+  retid: 1
+  trainmodel_id: 
+  offer1: MyString
+  offer2: MyString
+  offer3: MyString
+  range: MyText
+  modcheck: false

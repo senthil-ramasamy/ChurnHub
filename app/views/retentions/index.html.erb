@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Retentions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Retid</th>
+      <th>Trainmodel</th>
+      <th>Offer1</th>
+      <th>Offer2</th>
+      <th>Offer3</th>
+      <th>Range</th>
+      <th>Modcheck</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retentions.each do |retention| %>
+      <tr>
+        <td><%= retention.retid %></td>
+        <td><%= retention.trainmodel %></td>
+        <td><%= retention.offer1 %></td>
+        <td><%= retention.offer2 %></td>
+        <td><%= retention.offer3 %></td>
+        <td><%= retention.range %></td>
+        <td><%= retention.modcheck %></td>
+        <td><%= link_to 'Show', retention %></td>
+        <td><%= link_to 'Edit', edit_retention_path(retention) %></td>
+        <td><%= link_to 'Destroy', retention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retention', new_retention_path %>

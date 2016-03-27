@@ -1,5 +1,5 @@
 class TestmodelsController < ApplicationController
-  before_action :set_testmodel, only: [:show, :edit, :update, :destroy]
+  before_action :set_testmodel, only: [:show, :testbutton ,:edit, :update, :destroy]
 
   # GET /testmodels
   # GET /testmodels.json
@@ -21,10 +21,14 @@ class TestmodelsController < ApplicationController
   def edit
   end
   def testbutton
-    %x(python predictive_modelling.py > poutput)
+    Testmodel.find(params[:id]).modcheck = true
+    mycsv = Testmodel.find(params[:id]).testfile
+    myid = Testmodel.find(params[:id]).trainmodel_id
+    myotherfile = Trainmodel.find(myid).trainfile
+    %x(python predmodelling.py #{myotherfile.path} #{mycsv.path} > poutput)
     puts "test button fucntion working"
     respond_to do |format|
-      format.html { redirect_to trainmodels_path , notice:'the new data successfully predicted !' }
+      format.html { redirect_to @testmodel , notice:'the new data successfully predicted !' }
     end
   end 
  

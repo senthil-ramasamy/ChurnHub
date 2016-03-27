@@ -1,5 +1,5 @@
 class TrainmodelsController < ApplicationController
-  before_action :set_trainmodel, only: [:show, :edit, :update, :destroy]
+  before_action :set_trainmodel, only: [:show, :trainbutton, :edit, :update, :destroy]
 
   # GET /trainmodels
   # GET /trainmodels.json
@@ -20,9 +20,6 @@ class TrainmodelsController < ApplicationController
   end
 end
 
-
-
-
   # GET /trainmodels/new
   def new
     @trainmodel = Trainmodel.new
@@ -33,11 +30,13 @@ end
   end
 
 def trainbutton
-  %x(python churnpred.py > churnoutput)
+  Trainmodel.find(params[:id]).modcheck = true
+  mycsv = Trainmodel.find(params[:id]).trainfile
+  %x(python churntrain.py #{mycsv.path} > churnoutput)
   puts "python"
   # you should make something like this ! Trainmodel.first.modcheck = True
   respond_to do |format|
-    format.html { redirect_to trainmodels_path , notice:'The model was trained successfully.'}
+    format.html { redirect_to @trainmodel , notice:'The model was trained successfully.'}
   end
 end
   

@@ -17,15 +17,18 @@
   <p><%= @testmodel.moddesc %></p>
 </center>
   <br><center>
-<p><strong> File Path :</strong> <%= @testmodel.trainfile %> </p><input type="button" value = "+   Use the model!" onclick="window.location = '/testdata'" class ="btn btn-primary btn-md"><br>
+<p><strong> File Path :</strong> <%= @testmodel.trainfile %> </p><input type="button" value = "+   Use the model!" onclick="window.location = '/testdata/<%= @testmodel.id %>'" class ="btn btn-primary btn-md"><br>
 <%= link_to 'Edit', edit_testmodel_path(@testmodel),  class: "btn btn-primary btn-md" %>
 <%= link_to 'Back', testmodels_path ,  class: "btn btn-primary btn-md"%>
+
+<%= link_to "download", '/FinalResult.csv', :download => "#{@testmodel.modname}_FinalResult.csv" %>
+
 
 </center>
   
 </div>
            
-<!--
+<!--  
 
 <strong><h2>Features List : </h2></strong>
 <br><nr>

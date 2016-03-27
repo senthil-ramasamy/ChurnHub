@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :retentions
   get 'reports/test'
 
   get 'reports/train'
@@ -42,7 +43,7 @@ Rails.application.routes.draw do
       end
   end
   end
-  get '/publish' => 'trainmodels#trainbutton'
-  get '/testdata' => 'testmodels#testbutton'
+  get '/publish/:id' => 'trainmodels#trainbutton'
+  get '/testdata/:id' => 'testmodels#testbutton'
 
 end

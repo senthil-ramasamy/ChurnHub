@@ -1,5 +1,6 @@
+  <p id="notice" class="bg-success"><%= notice %></p>
 <div class="container">
-  <p id="notice"><%= notice %></p>
+
   <section class="prob-page">
     
      
@@ -15,7 +16,16 @@
   <p><%= @trainmodel.moddesc %></p>
 </center>
   <br><center>
-<p><strong> File Path :</strong> <%= @trainmodel.trainfile %> </p><input type="button" value = "+ Train the model!" onclick="window.location = '/publish'" class ="btn btn-primary btn-md"><br>
+
+  <script>
+function changeText()
+{
+ document.getElementById('boldStuff').innerHTML = 'Processing';
+}
+</script>
+<div id="boldStuff">
+<p><strong> File Path :</strong> <%= @trainmodel.trainfile %> </p></div><input type="button" value = "+ Train the model!" onclick="changeText();window.location = '/publish/<%= @trainmodel.id %>';" class ="btn btn-primary btn-md"><br>
+
 <%= link_to 'Edit', edit_trainmodel_path(@trainmodel),  class: "btn btn-primary btn-md" %>
 <%= link_to 'Back', trainmodels_path ,  class: "btn btn-primary btn-md"%>
 

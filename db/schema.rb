@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325160850) do
+ActiveRecord::Schema.define(version: 20160327101403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -138,6 +138,20 @@ ActiveRecord::Schema.define(version: 20160325160850) do
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
 
+  create_table "retentions", force: :cascade do |t|
+    t.integer  "retid"
+    t.integer  "trainmodel_id"
+    t.string   "offer1"
+    t.string   "offer2"
+    t.string   "offer3"
+    t.text     "range"
+    t.boolean  "modcheck"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "retentions", ["trainmodel_id"], name: "index_retentions_on_trainmodel_id", using: :btree
+
   create_table "solns", force: :cascade do |t|
     t.string   "solnname"
     t.text     "solntext"
@@ -241,6 +255,7 @@ ActiveRecord::Schema.define(version: 20160325160850) do
 
   add_index "vprobs", ["prob_id"], name: "index_vprobs_on_prob_id", using: :btree
 
+  add_foreign_key "retentions", "trainmodels"
   add_foreign_key "solns", "probs"
   add_foreign_key "testmodels", "trainmodels"
   add_foreign_key "vprobs", "probs"
