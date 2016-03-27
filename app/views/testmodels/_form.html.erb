@@ -2,17 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :modid %>
-    <%= f.input :moddesc %>
-    <%= f.input :modname %>
-    <%= f.input :trainfile %>
-    <%= f.input :testfile %>
-    <%= f.input :addtnl %>
-    <%= f.input :modcheck %>
-    <%= f.association :trainmodel %>
+    <%= f.input :modid  , label: "Model ID", placeholder: "Enter model number ..." %>
+    <%= f.association :trainmodel  , label: "Select the training model " %>
+    <%= f.input :modname , label: "Model Name for testing", placeholder: "Enter name of this section..." %>
+    <%= f.input :moddesc  , label: "Description (comments)", placeholder: "Enter description..."%>
+    <%= f.input :testfile  , label: "Upload File CSV Format" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit , class:" btn btn-danger btn-md" %>
   </div>
 <% end %>

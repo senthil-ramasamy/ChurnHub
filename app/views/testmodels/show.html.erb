@@ -1,12 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container">
   <p id="notice"><%= notice %></p>
   <section class="prob-page">
-    
-     
-        
-        <div class="jumbotron"> <center>
+  <div class="jumbotron"> <center>
   <h1><%= @testmodel.modname %></h1>
   <ul class="post-meta">
           <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Senthil</li>
@@ -17,12 +12,16 @@
   <p><%= @testmodel.moddesc %></p>
 </center>
   <br><center>
-<p><strong> File Path :</strong> <%= @testmodel.trainfile %> </p><input type="button" value = "+   Use the model!" onclick="window.location = '/testdata/<%= @testmodel.id %>'" class ="btn btn-primary btn-md"><br>
+   <script>
+function changeText()
+{
+ document.getElementById('boldStuff').innerHTML = '<font color="red"><strong>Processing...</strong></font>';
+}
+</script> 
+<div id="boldStuff">
+<p><strong> File Path :</strong> <%= @testmodel.testfile %> </p></div><input type="button" value = "+   Use the model!" onclick="changeText();window.location = '/testdata/<%= @testmodel.id %>';" class ="btn btn-primary btn-lg"><br>
 <%= link_to 'Edit', edit_testmodel_path(@testmodel),  class: "btn btn-primary btn-md" %>
 <%= link_to 'Back', testmodels_path ,  class: "btn btn-primary btn-md"%>
-
-<%= link_to "download", '/FinalResult.csv', :download => "#{@testmodel.modname}_FinalResult.csv" %>
-
 
 </center>
   

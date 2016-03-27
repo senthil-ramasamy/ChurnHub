@@ -13,6 +13,9 @@ class TestmodelsController < ApplicationController
   end
   
   def result
+    #@csv_table1 = CSV.open("pred1.csv", :headers => true).read
+    #@csv_table2 = CSV.open("pred2.csv", :headers => true).read
+    @csv_table3 = CSV.open("FinalResult.csv", :headers => true).read
   end
 
   # GET /testmodels/new
@@ -24,14 +27,17 @@ class TestmodelsController < ApplicationController
   def edit
   end
   def testbutton
-    Testmodel.find(params[:id]).modcheck = true
+    @tmodel = Testmodel.find(params[:id])
+    @tmodel.modcheck = true
+    @tmodel.save
     mycsv = Testmodel.find(params[:id]).testfile
     myid = Testmodel.find(params[:id]).trainmodel_id
     myotherfile = Trainmodel.find(myid).trainfile
     %x(python predmodelling.py #{myotherfile.path} #{mycsv.path} > poutput)
+    %x(cp poutput public/poutput.txt)
     puts "test button fucntion working"
     respond_to do |format|
-      format.html { redirect_to @testmodel , notice:'the new data successfully predicted !' }
+      format.html { redirect_to '/result' , notice:'the new data successfully predicted !' }
     end
   end 
  

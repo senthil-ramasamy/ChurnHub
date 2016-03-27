@@ -10,25 +10,25 @@
 				<div class="item active" style="background-image: url(http://insight.venturebeat.com/sites/default/files/users.png);opacity:0.8;"> 
 					<div class="carousel-caption"> 
 						<div> 
-							<h2 class="heading animated bounceInDown">Problems are just Challenges</h2> 
+							<h2 class="heading animated bounceInDown">Never lose another Customer!</h2> 
 							<p class="animated bounceInUp">Lets find a soluntion</p> 
-							<a class="btn btn-default slider-btn animated fadeIn" href="#">Explore !</a> 
+							<a class="btn btn-default slider-btn animated fadeIn" href="/trainmodels">Explore !</a> 
 						</div> 
 					</div> 
 				</div>
 				<div class="item" style="background-image: url(http://blogs-images.forbes.com/ibm/files/2015/02/customer-data.jpg)"> 
 					<div class="carousel-caption"> <div> 
-						<h2 class="heading animated bounceInDown">Lets make it a sport !</h2> 
-						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
+						<h2 class="heading animated bounceInDown">Use Machine Learning to Improve!</h2> 
+						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="/trainmodels">Get Started</a> 
 					</div> 
 				</div> 
 			</div> 
 			<div class="item" style="background-image: url(http://blogs.rivetlogic.com/wp-content/uploads/2016/01/Customer-Segmentation_775x425_d79.jpg);opacity:0.8;"> 
 				<div class="carousel-caption"> 
 					<div> 
-						<h2 class="heading animated bounceInRight">Prachana : Lets start playing !</h2> 
+						<h2 class="heading animated bounceInRight">Lets start playing !</h2> 
 						<p class="animated bounceInLeft">Collaborative Solution Building</p> 
-						<a class="btn btn-default slider-btn animated bounceInUp" href="#">Get Started</a> 
+						<a class="btn btn-default slider-btn animated bounceInUp" href="/trainmodels">Get Started</a> 
 					</div> 
 				</div> 
 			</div>
@@ -42,93 +42,52 @@
 	
 	
 
-	<section id="blog"> 
+	<section id="blog"> <center>
 						<div class="container">
 							<div class="row text-center clearfix">
 								<div class="col-sm-8 col-sm-offset-2">
-									<a href="problems.html"><h2 class="title-one">Problems</h2></a>
+									<a href="problems.html"><h2 class="title-one">Features</h2></a>
 									<p class="blog-heading">Problems are the place where innovation starts ! <br/>Hunt big, Innovate Big !</p>
 								</div>
 							</div> 
 							<div class="row">
-								<% @problems.each do |prob| %>
-								<div class="col-sm-4">
+									<div class="col-sm-4">
 									<div class="single-blog">
-										<img src="images/blog/1.jpg" alt="" />
-										<h2><%= link_to prob.pname , prob  %></h2>
-										<ul class="post-meta">
-											<li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> John</li>
-											<li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> Apr 15 2015</li>
-										</ul>
+										<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS19vgO7UoJnVmA_bQQvnOc9UUKxgOZQu9tXkW7fX_gNymg_CK4" alt="" />
+										<h2>Predict your customers !</h2>
 										<div class="blog-content">
-											<p><%= raw(prob.pstatement.first(100)) %></p>
+											<p>ChurnHub helps you predict what your users are going to do next, so you can intervene and change the outcome.</p>
 										</div>
-										<a href="/probs" class="btn btn-primary">Read More</a>
+										<a href="/trainmodels" class="btn btn-primary">Read More</a>
 									</div>
 									
 								</div>
-								<% end %>	
+								<div class="col-sm-4">
+									<div class="single-blog">
+										<img src="http://www.retentionscience.com/assets/cache_image/assets/content/images/articles/uploads/2014/09/customerchurn_775x425_612.png" alt="" />
+										<h2>Accuracy Rate High</h2>
+										<div class="blog-content">
+											<p>With unique and state of art logistic regression and predictive modelling concepts we rock it !</p>
+										</div>
+										<a href="/trainmodels" class="btn btn-primary">Read More</a>
+									</div>
+									
+								</div>
+								<div class="col-sm-4">
+									<div class="single-blog">
+										<img src="http://www.aia.es/wp-content/uploads/2012/09/predictive-models.jpg" alt="" />
+										<h2>Past! Present! Future!</h2>
+										<div class="blog-content">
+											<p>Integration with API like rails interface ! Will act as a third party application to help you in multitudes!</p>
+										</div>
+										<a href="/trainmodels" class="btn btn-primary">Read More</a>
+									</div>
+									
+								</div>
 									</div> 
 								</div> 
 							</div> 
-						</section> <!--/#blog-->
-
-	<section id="services" class="parallax-section">
-		<div class="container">
-			<div class="row text-center">
-				<div class="col-sm-8 col-sm-offset-2">
-					<h2 class="title-one">Solutions</h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="our-service">
-						<div class="services row">
-							<% @solns.each do |soln| %>
-							<div class="col-sm-4">
-								<div class="single-service">
-									<i class=" fa fa-hourglass-start "></i>
-									<h2><%= link_to soln.solnname , soln  %></h2>
-									<p><%= raw(soln.solntext.first(250)) %></p>
-								</div>
-							</div>
-							<% end %>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/#service-->
-
-		<section id="our-team">
-			<div class="container">
-				<div class="row text-center">
-					<div class="col-sm-8 col-sm-offset-2">
-						<h2 class="title-one">Challenges</h2>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
-					</div>
-				</div>
-				<div id="team-carousel" class="carousel slide" data-interval="false">
-					<a class="member-left" href="#team-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-					<a class="member-right" href="#team-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-					<div class="carousel-inner team-members">
-						<div class="row item active">
-						<% @challenges.each do |challenge| %>	
-							<div class="col-sm-6 col-md-3">
-								<div class="single-member">
-									<img src="http://www.clker.com/cliparts/f/A/y/K/p/Q/solution-md.png" />
-									<h4><%=  link_to challenge.chalname, challenge %></h4>
-									<h5>Rs.<%= challenge.chalprize %></h5>
-									<p><%= raw(challenge.chaltext.first(150)) %></p>
-								</div>
-							</div>
-							<% end %>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/#Our-Team-->
+						</center></section> <!--/#blog-->
 
 					
 
@@ -148,11 +107,9 @@
 									<div class="pattern"></div>
 									<div class="row text-center clearfix">
 										<div class="col-sm-6">
-											<div class="contact-address"><address><p><span>Devs</span>Cluster</p><strong>36 North Kafrul<br>ka Cantonment Area<br> BaDhaka-1206, India</strong><br><small>( Lorem ipsum dolor sit amet, consectetuer adipiscing elit )</small></address>
+											<div class="contact-address"><address><p><span>Devs</span>Group</p><strong>36 North CEG<br>ka Cantonment Area<br> BaDhaka-1206, India</strong><br><small>( Lorem ipsum dolor sit amet, consectetuer adipiscing elit )</small></address>
 												<div class="social-icons">
 													<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
-													<a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
-													<a href="#"><i class="fa fa-linkedin"></i></a>
 												</div>
 											</div>
 										</div>

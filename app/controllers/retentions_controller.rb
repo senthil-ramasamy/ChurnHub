@@ -1,5 +1,5 @@
 class RetentionsController < ApplicationController
-  before_action :set_retention, only: [:show, :edit, :update, :destroy]
+  before_action :set_retention, only: [:show, :retain, :edit, :update, :destroy]
 
   # GET /retentions
   # GET /retentions.json
@@ -22,14 +22,24 @@ class RetentionsController < ApplicationController
   end
 
   def mailsend
+  end
+
+  def retain
+    @tmodel = Retention.find(params[:id])
+    @tmodel.modcheck = true
+    @tmodel.save
     myid = Retention.find(params[:id]).trainmodel_id
     myfile = Trainmodel.find(myid).trainfile
     off1 = Retention.find(params[:id]).offer1
     off2 = Retention.find(params[:id]).offer2
     off3 = Retention.find(params[:id]).offer3
-    %x(python mailsend.py #{off1} #{off2} #{off3})
+    #%x(python mailsend.py #{off1} #{off2} #{off3})
     %x(python massemail.py -m example-template.md -c maildataset.csv )
-  end
+    puts "test button fucntion working"
+    respond_to do |format|
+      format.html { redirect_to '/mailsend' , notice:'the new data successfully predicted !' }
+    end
+  end 
   # POST /retentions
   # POST /retentions.json
   def create

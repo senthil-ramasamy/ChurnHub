@@ -157,7 +157,7 @@ def draw_confusion_matrices(confusion_matrices, class_names):
         #pl.show()
         
         pl.savefig("Cmatrix"+str(i)+".png")
-	os.system("cp Cmatrix1.png public/assets/Cmatrix1.png")
+	os.system("cp Cmatrix1.png app/assets/images/Cmatrix1.png")
         i=i+1
 
         
@@ -230,6 +230,7 @@ g=ggplot(counts,aes(x='pred_prob',y='true_prob',size='count')) + \
 #print g
 ggsave(g,"rf.png")
 
+os.system("cp rf.png app/assets/images/rf.png")
 #fitting the model
 
 from sklearn.cross_validation import train_test_split

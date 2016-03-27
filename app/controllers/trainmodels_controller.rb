@@ -21,7 +21,7 @@ class TrainmodelsController < ApplicationController
 end
 
   def report
-    @csv_table = CSV.open("FinalResult.csv", :headers => true).read
+    @csv_table = CSV.open("logit.csv", :headers => true).read
   end
   # GET /trainmodels/new
   def new
@@ -33,14 +33,16 @@ end
   end
 
 def trainbutton
-  Trainmodel.find(params[:id]).modcheck = true
+  @tmodel = Trainmodel.find(params[:id])
+  @tmodel.modcheck = true
+  @tmodel.save
   mycsv = Trainmodel.find(params[:id]).trainfile
   %x(python churntrain.py #{mycsv.path} > churnoutput)
   %x(cp churnoutput public/churnoutput.txt)
   puts "python"
   # you should make something like this ! Trainmodel.first.modcheck = True
   respond_to do |format|
-    format.html { redirect_to @trainmodel , notice:'The model was trained successfully.'}
+    format.html { redirect_to '/report' , notice:'The model was trained successfully.'}
   end
 end
   

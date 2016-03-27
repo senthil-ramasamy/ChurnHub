@@ -7,16 +7,16 @@
   
 <div class="jumbotron">
   <center><h2> Upload and Explore!</h2></center>
-  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Upload your CSV</a></p></center>
+  <p> ChurnHub goes a big step further, showing you which traffic sources bring you customers that stick around. Stop pouring cash into a leaky funnel. Double down on the marketing channels that deliver profitable growth.</p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="/testmodels/new" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Upload your CSV</a></p></center>
 </div>
     <table class="table">
         <thead>
           <tr>
             <th>Model Id</th>
-            <th>Title</th>
+            <th>Title and Details</th>
             <th>Status</th>
-            <th>Check</th>
+            <th>Check it out !</th>
             <th></th>
           </tr>
         </thead>
@@ -35,7 +35,7 @@
                 
               </td>
               <td><h4><% if(testmodel.modcheck==true) %>Executed<% else %>New<% end %><h4></td>
-              <td><h4><%= link_to 'Report View', testmodel, class: "btn btn-primary btn-md" %></h4></td>
+              <td><h4><%= link_to 'View !', testmodel, class: "btn btn-primary btn-md" %></h4></td>
               
             </tr>
           </tr>

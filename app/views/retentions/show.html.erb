@@ -1,39 +1,34 @@
-<p id="notice"><%= notice %></p>
+  <p id="notice" class="bg-success"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Retid:</strong>
-  <%= @retention.retid %>
-</p>
+  <section class="prob-page">
+    
+     
+        
+        <div class="jumbotron"> <center>
+  <h1>Stratergy #<%= @retention.retid %></h1>
+  <ul class="post-meta">
+          <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Senthil</li>
+          <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong> <%= @retention.created_at %></li>
+        </ul>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+</center>
+  <br><center>
 
-<p>
-  <strong>Trainmodel:</strong>
-  <%= @retention.trainmodel %>
-</p>
+  <script>
+function changeText()
+{
+ document.getElementById('boldStuff').innerHTML = '<font color="red"><strong>Sending...</strong></font>';
+}
+</script>
+<div id="boldStuff">
+<p><strong> Click to send email !</strong> </p></div><input type="button" value = "+ Send Retention mail!" onclick="changeText();window.location = '/retain/<%= @retention.id %>';" class ="btn btn-primary btn-md"><br>
 
-<p>
-  <strong>Offer1:</strong>
-  <%= @retention.offer1 %>
-</p>
+<%= link_to 'Edit', edit_retention_path(@retention),  class: "btn btn-primary btn-md" %>
+<%= link_to 'Back', retentions_path ,  class: "btn btn-primary btn-md"%>
 
-<p>
-  <strong>Offer2:</strong>
-  <%= @retention.offer2 %>
-</p>
-
-<p>
-  <strong>Offer3:</strong>
-  <%= @retention.offer3 %>
-</p>
-
-<p>
-  <strong>Range:</strong>
-  <%= @retention.range %>
-</p>
-
-<p>
-  <strong>Modcheck:</strong>
-  <%= @retention.modcheck %>
-</p>
-
-<%= link_to 'Edit', edit_retention_path(@retention) %> |
-<%= link_to 'Back', retentions_path %>
+</center>
+  
+</div>
+           
+    

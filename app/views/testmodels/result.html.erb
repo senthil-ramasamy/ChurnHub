@@ -1,1 +1,24 @@
-hello
+<center><br><h1 class = "bg-success"><br>Successful Prediction Analysis Done!<br><img src="http://www.flowmotioncafe.com/wp/wp-content/uploads/green_tick-300x300.png"><%= link_to "Download Predicted File", '/FinalResult.csv', class: "btn btn-danger btn-lg" %><br><br><%= link_to "Download Log File", '/poutput.txt', class: "btn btn-danger btn-lg" %><br><br></h1>
+<p >Find some of the results below ... ! </p>
+
+<table border="0" cellspacing="5" cellpadding="5" class = "table">
+  <tr>
+  <% @csv_table3.headers.each do |header| %>
+    <th><%= header %></th>
+  <% end %> 
+  </tr>
+  <% @csv_table3.first(10).each do |row| %>
+    <tr>
+    <% row.each do |element| %>
+      <td><%= element[1] %></td>
+    <% end %>
+    </tr>
+  <% end %> 
+</table>
+
+<h2>Few Graphs for Analysis</h2>
+<%= image_tag "rf.png", size: "800x800" %>
+
+<%= image_tag "Cmatrix1.png", size: "800x800" %>
+
+</center>

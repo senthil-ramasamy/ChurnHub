@@ -1,39 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Retentions</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Retid</th>
-      <th>Trainmodel</th>
-      <th>Offer1</th>
-      <th>Offer2</th>
-      <th>Offer3</th>
-      <th>Range</th>
-      <th>Modcheck</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @retentions.each do |retention| %>
-      <tr>
-        <td><%= retention.retid %></td>
-        <td><%= retention.trainmodel %></td>
-        <td><%= retention.offer1 %></td>
-        <td><%= retention.offer2 %></td>
-        <td><%= retention.offer3 %></td>
-        <td><%= retention.range %></td>
-        <td><%= retention.modcheck %></td>
-        <td><%= link_to 'Show', retention %></td>
-        <td><%= link_to 'Edit', edit_retention_path(retention) %></td>
-        <td><%= link_to 'Destroy', retention, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<br><br><p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="jumbotron">
+  <center><h2> Save your Customer!</h2></center>
+  <p> ChurnHub goes a big step further, showing you which traffic sources bring you customers that stick around. Stop pouring cash into a leaky funnel. Double down on the marketing channels that deliver profitable growth.</p>
+  <center><p><a class="btn btn-primary btn-md" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Explore More</a> <a class="btn btn-primary btn-md" href="/retention/new" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Send now !</a></p></center>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title and Details</th>
+            <th>Status</th>
+            <th>Check it out !</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+               <% @retentions.each do |retention| %>
+           <tr>
+              <td><h4><%= retention.retid %><h4></td>
+              <td>
+                <h3 class="head"><%= link_to "Method #{retention.id}", retention  %></h3>
+                <ul class="post-meta">
+                  <li><i class="fa fa-pencil-square-o"></i><strong> Posted By:</strong> Jai</li>
+                  <li><i class="fa fa-clock-o"></i><strong> Posted On:</strong>12 - 07 - 2016</li>
+              </td>
+              <td><h4><% if(retention.modcheck==true) %>Sent<% else %>To-Be-Sent<% end %><h4></td>
+              <td><h4><%= link_to 'View !', retention, class: "btn btn-primary btn-md" %></h4></td>
+              
+            </tr>
+          </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Retention', new_retention_path %>
+<br><center>
+<%= link_to 'New Retention', new_retention_path , class: "btn btn-primary btn-md" %>
+</center>
